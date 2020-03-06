@@ -13,3 +13,9 @@ class Dog
     def display
         puts "I am of #{@breed} breed and my name is #{@name}"
     end
+end
+#make an object
+#Objects are created on the heap
+d = Dog.new('Labrador', "Benzy")
+
+=begin
