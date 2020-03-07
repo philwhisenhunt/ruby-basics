@@ -19,3 +19,9 @@ end
 d = Dog.new('Labrador', "Benzy")
 
 =begin
+=end
+# puts d.methods.sort
+
+#Amongst these many methods, the methods object_id and respond_to? are important.
+# Every object in Ruby has a unique id number associated with it
+put "The id of d is #{d.object_id}."
