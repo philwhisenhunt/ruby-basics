@@ -19,12 +19,15 @@ end
 d = Dog.new('Labrador', "Benzy")
 
 =begin
+#Every object is born with certain innate abilities.
+#To see a list of innate methods, you can call the methods and throw in a sort operations
+#to make it easier to browse visually
 =end
-# puts d.methods.sort
+puts d.methods.sort
 
 #Amongst these many methods, the methods object_id and respond_to? are important.
 # Every object in Ruby has a unique id number associated with it
-put "The id of d is #{d.object_id}."
+puts "The id of d is #{d.object_id}."
 
 if d.respond_to?("talk")
     d.talk
@@ -43,4 +46,4 @@ d =nil
 d.display
 
 d1 = nil
-#abandons the Dog object and eligable for GC (garbage collection)
+#abandons the Dog object and eligable for GC (garbage collection-)
