@@ -34,3 +34,13 @@ end
 
 d.bark
 d.display
+
+#point them to the same object
+d1 = d
+d.display
+# making d a nil reference, meaning it does not refer to anything
+d =nil
+d.display
+
+d1 = nil
+#abandons the Dog object and eligable for GC (garbage collection)
