@@ -5,5 +5,7 @@ Class Taco
     end
 
     def combine
-        
+        puts "Now combining the two items"
+        if @shell.nil?
+            puts "you don't have enough ingredients"
     end
