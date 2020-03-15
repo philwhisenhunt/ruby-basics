@@ -16,5 +16,10 @@ Class Taco
         puts "Eating taco..."
     end
 
+    def assembleModified
+        puts "Making special taco"
+    end
+    
+
 end
 
