@@ -8,4 +8,13 @@ Class Taco
         puts "Now combining the two items"
         if @shell.nil?
             puts "you don't have enough ingredients"
+        else
+            puts "Combined!"
     end
+
+    def devour
+        puts "Eating taco..."
+    end
+
+end
+
