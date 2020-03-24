@@ -19,6 +19,10 @@ Class Taco
     def assembleModified
         puts "Making special taco"
     end
+
+    def consume
+        puts "Taco is being eaten"
+    end
     
 
 end
