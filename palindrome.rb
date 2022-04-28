@@ -7,15 +7,6 @@ def is_palindrome(s)
     puts "The count is " + count.to_s
     mid_point = 0
 
-    # for i in 0..count do
-    #     puts "The number is " + i.to_s
-    #     inverse_num = 0 - i
-    #     puts "The inverse is " + inverse_num.to_s
-    #     puts "The beginning of the array is " + arr[i]
-    #     if arr[i] != arr[inverse_num]
-    #         return false
-    #     end
-    # end
     count.times do 
         if arr.count > 0
             if arr.first != arr.last
