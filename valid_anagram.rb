@@ -9,6 +9,13 @@ def is_anagram(s, t)
     # loop through a count/2 ceil of the first array and find that spot in each place
     count = s.count
     for i in 0..count do
+        if s[i] != t[i]
+            return false
+        end
+
+        if s[-i] != t[-i]
+            return false
+        end
     end
     # at the same time, loop through that count from the end
 end
