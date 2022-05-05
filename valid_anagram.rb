@@ -13,9 +13,10 @@ def is_anagram(s, t)
             return false
         end
 
+        # at the same time, loop through that count from the end
         if s[-i] != t[-i]
             return false
         end
     end
-    # at the same time, loop through that count from the end
+    return true
 end
