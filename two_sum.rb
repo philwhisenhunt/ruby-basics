@@ -2,16 +2,12 @@ def two_sum(nums, target)
     # for each number, add it to each other number 
     # compare that sum to target
 
-    count = nums.count - 1
+    count = nums.count
     for i in 0..count do
         position = i
         while (position < count) do
-            rem = target - nums[i]
-            if nums.include? rem
-                return [i, nums.index(rem)]
-            else
-                position += 1
-            end
+          puts "Position is " + position.to_s
+          position += 1
         end
     end
     
