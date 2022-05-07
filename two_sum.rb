@@ -8,8 +8,8 @@ def two_sum(nums, target)
     # puts ""
     minus_one_count = nums.count - 1
     for i in 0..minus_one_count do
-     for j in 1..minus_one_count do
-      
+     for j in i..minus_one_count do
+        puts "i:" + i.to_s + " j:" + j.to_s
         if nums[i] + nums[j] == target && (i != j)
             return [i, j]
         end
