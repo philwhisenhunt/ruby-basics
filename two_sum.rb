@@ -1,21 +1,15 @@
 def two_sum(nums, target)
-    # for each number, add it to each other number 
-    # compare that sum to target
 
-    # print "nums is: " + nums.to_s
-    # puts ""
-    # print "target is: " + target.to_s
-    # puts ""
-    minus_one_count = nums.count - 1
-    for i in 0..minus_one_count do
-     for j in i..minus_one_count do
-        puts "i:" + i.to_s + " j:" + j.to_s
-        if nums[i] + nums[j] == target && (i != j)
-            return [i, j]
-        end
-     end
+  
+    i = 1
+    position_1 = 0 
+    position_2 = position_1 + i
+    while((nums[position_1] + nums[position_2]) != target) do
+        i++
+        position_2  = position_1 + i]
     end
-    
+    return [ position_1, position_2]
+ 
 end
 
 # nums = [2,7,11,15]
