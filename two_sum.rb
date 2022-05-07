@@ -2,13 +2,18 @@ def two_sum(nums, target)
     # for each number, add it to each other number 
     # compare that sum to target
 
-    count = nums.count
-    for i in 0..count do
-        position = i
-        while (position < count) do
-          puts "Position is " + position.to_s
-          position += 1
+    # print "nums is: " + nums.to_s
+    # puts ""
+    # print "target is: " + target.to_s
+    # puts ""
+    minus_one_count = nums.count - 1
+    for i in 0..minus_one_count do
+     for j in 1..minus_one_count do
+        puts "i:" + i.to_s + " j:" + j.to_s
+        if nums[i] + nums[j] == target
+            return [i, j]
         end
+     end
     end
     
 end
