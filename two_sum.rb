@@ -6,7 +6,7 @@ def two_sum(nums, target)
     position_2 = position_1 + i
     while((nums[position_1] + nums[position_2]) != target) do
         i++
-        position_2  = position_1 + i]
+        position_2 = position_1 + i
     end
     return [ position_1, position_2]
  
