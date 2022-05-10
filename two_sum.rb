@@ -1,14 +1,15 @@
 def two_sum(nums, target)
 
   
-    i = 1
-    position_1 = 0 
-    position_2 = position_1 + i
-    while((nums[position_1] + nums[position_2]) != target) do
-        i++
-        position_2 = position_1 + i
+   #subtract the first number from the target
+   count = nums.count - 1
+    for i in 0..count do
+        puts i
+        goal = target - nums[i]
+        if nums.include?(goal) 
+            return [i, nums.index(goal)] unless nums.index(goal) == i    
+        end
     end
-    return [ position_1, position_2]
  
 end
 
