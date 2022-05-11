@@ -18,4 +18,14 @@ end
 
 nums = [2,5,5,11]
 target = 10
-print two_sum(nums, target)
+# print two_sum(nums, target)
+
+def two_sum_hash(nums, target)
+    hash = []
+    count = nums.count -1
+    for i in 0..count do
+        puts if
+    end
+end
+
+print two_sum_hash(nums, target)
