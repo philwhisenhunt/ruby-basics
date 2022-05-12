@@ -24,7 +24,8 @@ def two_sum_hash(nums, target)
     hash = []
     count = nums.count -1
     for i in 0..count do
-        puts if
+        puts i
+        hash[i] = nums[i]
     end
 end
 
