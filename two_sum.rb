@@ -28,6 +28,7 @@ def two_sum_hash(nums, target)
     for i in 0..count do
         puts i
         # hash[i] = nums[i]
+        hash[] = [i, nums[i]]
     end
 end
 nums = [2,5,5,11]
