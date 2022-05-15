@@ -22,14 +22,16 @@ target = 10
 
 def two_sum_hash(nums, target)
     # puts nums.count - 1
-    hash = []
+    hash = {}
     count = nums.count - 1
     puts count.to_s + " is the count"
     for i in 0..count do
         puts i
         # hash[i] = nums[i]
-        hash[] = [i, nums[i]]
+        hash[i] = nums[i]
     end
+    puts "The hash is: "
+    print hash
 end
 nums = [2,5,5,11]
 target = 10
