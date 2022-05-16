@@ -26,7 +26,11 @@ def two_sum_hash(nums, target)
     count = nums.count - 1
     puts count.to_s + " is the count"
     for i in 0..count do
-        puts i
+        difference = target - nums[i]
+        if hash.include?(difference)
+            return true
+        end
+        # puts i
         # hash[i] = nums[i]
         hash[i] = nums[i]
     end
