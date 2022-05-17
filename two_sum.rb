@@ -26,19 +26,26 @@ def two_sum_hash(nums, target)
     count = nums.count - 1
     # puts count.to_s + " is the count"
     for i in 0..count do
+        # puts i
         difference = target - nums[i]
-        puts "Difference: " + difference.to_s
-        puts "and the hash includes it?: " + hash.include?(difference).to_s
+        puts difference
+        # puts "Difference: " + difference.to_s
+        # puts "and the hash includes it?: " + hash.include?(difference).to_s
+        difference = difference.to_s
+        if difference == "5"
+            puts hash.include?(difference)
+        end
         if hash.include?(difference)
-            return [nums.index(hash[i]), nums.index(nums.index[i])]
+            # puts "Hash is " + hash[difference].to_s
+            return [hash[difference], nums.index(i)]
         end
         # puts i
         # hash[i] = nums[i]
         number_storage = nums[i]
         # hash[number_storage] = i
-        print number_storage
-        hash[number_storage.to_s] = 200
-        print "hash is " + hash.to_s
+        # print number_storage
+        hash[number_storage.to_s] = i
+        # print "hash is " + hash.to_s
     end
     # puts "The hash is: "
     # print hash
