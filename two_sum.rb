@@ -50,6 +50,6 @@ def two_sum_hash(nums, target)
     # puts "The hash is: "
     # print hash
 end
-nums = [2,5,5,11]
-target = 10
+nums = [2,7,11,15]
+target = 19
 print two_sum_hash(nums, target)
