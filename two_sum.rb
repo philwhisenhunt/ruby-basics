@@ -30,6 +30,7 @@ def two_sum(nums, target)
             return [hash[difference], i]
         else
             #add it to the hash
+            # hash[difference] = i
         end
         number_storage = nums[i]
         hash[number_storage.to_s] = i
