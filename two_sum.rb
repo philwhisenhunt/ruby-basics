@@ -28,9 +28,6 @@ def two_sum(nums, target)
         difference = difference.to_s
         if hash.include?(difference)
             return [hash[difference], i]
-        else
-            #add it to the hash
-            # hash[difference] = i
         end
         number_storage = nums[i]
         hash[number_storage.to_s] = i
