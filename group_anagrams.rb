@@ -13,19 +13,18 @@ def group_anagrams(strs)
     hasher = {}
     strs.each do |str|
         sorted_version = str.chars.sort_by(&:downcase).join
+        puts sorted_version
         if hasher.include?(sorted_version)
             # put it with that group
+          
             hasher[sorted_version] = [hasher[sorted_version], str]
         else
+            print " which is else \n"
             hasher[sorted_version] = str
         end
     end
-    assembled = []
-    hasher.each do |key, value|
 
-        assembled <<  value
-    end
-    return assembled
+    # return hasher
 
     
 end
