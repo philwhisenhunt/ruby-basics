@@ -1,4 +1,4 @@
-def two_sum(nums, target)
+def two_sum_old(nums, target)
 
   
    #subtract the first number from the target
