@@ -22,7 +22,11 @@ def group_anagrams(strs)
         end
     end
 
-    return hasher
+    hasher.each do |key, value|
+        # puts value
+        storage_array = storage_array.append(value)
+    end
+    return storage_array
 
     
 end
