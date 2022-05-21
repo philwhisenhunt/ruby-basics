@@ -11,21 +11,18 @@ def group_anagrams(strs)
     # if not, make it a new group
 
     storage_array = []
+    hasher = {}
     strs.each do |str|
-        puts "And now the array is: " + storage_array.to_s
         sorted_version = str.chars.sort_by(&:downcase).join
-        puts "SORTED: " + sorted_version
-        if storage_array.include?(sorted_version)
-            # put it with that group
-          print "TRUE"
-            storage_array[sorted_version] = [hasher[sorted_version], str]
+
+        if hasher.include?(sorted_version)
+            hasher[sorted_version] = hasher[sorted_version].append(str)
         else
-            # print " which is else \n"
-            storage_array = storage_array.append(str)
+            hasher[sorted_version] = [str]
         end
     end
 
-    return storage_array
+    return hasher
 
     
 end
