@@ -8,6 +8,8 @@ def top_k_frequent(nums, k)
     # for each one, check if it is in the hash
     # if it is, increase the value for that key by one
     # if not, add it to the hash
+    # sort the hash from greatest to the least
+    # return the first two results
     
 end
 nums = [1,1,1,2,2,3]
