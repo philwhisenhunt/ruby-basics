@@ -9,18 +9,19 @@ def top_k_frequent(nums, k)
     nums.each do |num|
          # for each one, check if it is in the hash
         # if it is, increase the value for that key by one
-        if hash.include?(num)
-            hash[num.to_s] = hash[num.to_s] + 1
+        if hash_it.include?(num)
+            hash_it[num.to_s] = hash_it[num.to_s] + 1
         else
-            # if not, add it to the hash
-            hash[num.to_s] = 1
+            # if not, add it to the hash_it
+            hash_it[num.to_s] = 1
         end
        
     end
     # sort the hash from greatest to the least
+    return hash_it
     # return the first two results
     
 end
 nums = [1,1,1,2,2,3]
 k = 2
-puts top_k_frequent(nums, k)
+print top_k_frequent(nums, k)
