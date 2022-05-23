@@ -7,11 +7,15 @@ def top_k_frequent(nums, k)
     hash_it = {}
     #iterate through array
     nums.each do |num|
+         # for each one, check if it is in the hash
+        # if it is, increase the value for that key by one
         if hash.include?(num)
             hash[num.to_s] = hash[num.to_s] + 1
-        # for each one, check if it is in the hash
-        # if it is, increase the value for that key by one
-        # if not, add it to the hash
+        else
+            # if not, add it to the hash
+            hash[num.to_s] = 1
+        end
+       
     end
     # sort the hash from greatest to the least
     # return the first two results
@@ -19,4 +23,4 @@ def top_k_frequent(nums, k)
 end
 nums = [1,1,1,2,2,3]
 k = 2
-top_k_frequent
+puts top_k_frequent(nums, k)
