@@ -18,6 +18,7 @@ def top_k_frequent(nums, k)
        
     end
     # sort the hash from greatest to the least
+    hash_it = hash_it.sort.to_h
     return hash_it
     # return the first two results
     
