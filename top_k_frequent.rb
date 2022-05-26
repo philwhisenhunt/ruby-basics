@@ -19,7 +19,12 @@ def top_k_frequent(nums, k)
     end
     # sort the hash from greatest to the least
     hash_it = hash_it.sort.to_h
-    return hash_it
+    the_final_array = []
+    k = k + 1
+    for i in 1..k do
+        the_final_array << hash_it[i.to_s]
+    end
+    return the_final_array
     # return the first two results
     
 end
