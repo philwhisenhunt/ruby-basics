@@ -19,7 +19,17 @@ def top_k_frequent(nums, k)
        
     end
 
- puts hash_it
+    # puts hash_it
+    sort_it = hash_it.sort_by{|k,v| v}
+    count = sort_it.count - 1 
+    # print sort_it
+    final = []
+    count.downto(k - 1) do |i|
+        # puts i
+        # puts sort_it[i]
+        final << sort_it[i][0].to_i
+    end
+    return final
 
 
     
