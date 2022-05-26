@@ -10,6 +10,7 @@ def top_k_frequent(nums, k)
          # for each one, check if it is in the hash
         # if it is, increase the value for that key by one
         if hash_it.include?(num)
+            prints "yup"
             hash_it[num.to_s] = hash_it[num.to_s] + 1
         else
             # if not, add it to the hash_it
@@ -17,19 +18,9 @@ def top_k_frequent(nums, k)
         end
        
     end
-    # sort the hash from greatest to the least
-    sort_it = hash_it.sort
-    print sort_it
-    the_final_array = []
-    count = sort_it.count - 1
-    # puts "Count is: " + count.to_s
-    # puts "K is: " + k.to_s
-    count.downto(k) do |i|
-        # puts sort_it[i][0].to_i
-        the_final_array << sort_it[i]
-    end
-    # print the_final_array
-    # return the_final_array
+
+ puts hash_it
+
 
     
 end
