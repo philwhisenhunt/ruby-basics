@@ -19,14 +19,17 @@ def top_k_frequent(nums, k)
     end
     # sort the hash from greatest to the least
     sort_it = hash_it.sort
+    print sort_it
     the_final_array = []
-    count = sort_it.count
-    puts "Count is: " + count.to_s
-    puts "K is: " + k.to_s
+    count = sort_it.count - 1
+    # puts "Count is: " + count.to_s
+    # puts "K is: " + k.to_s
     count.downto(k) do |i|
-        puts i
-        # the_final_array << sort_it[i]
+        # puts sort_it[i][0].to_i
+        the_final_array << sort_it[i]
     end
+    # print the_final_array
+    # return the_final_array
 
     
 end
