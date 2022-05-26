@@ -20,10 +20,10 @@ def top_k_frequent(nums, k)
     # sort the hash from greatest to the least
     hash_it = hash_it.sort.to_h
     the_final_array = []
-    k = k + 1
-    for i in 1..k do
-        the_final_array << hash_it[i.to_s]
-    end
+   
+    # for hash_it.first(k).to_h do |key, value|
+    #     the_final_array << key
+    # end
     return the_final_array
     # return the first two results
     
