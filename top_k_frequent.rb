@@ -9,8 +9,8 @@ def top_k_frequent(nums, k)
     nums.each do |num|
          # for each one, check if it is in the hash
         # if it is, increase the value for that key by one
-        if hash_it.include?(num)
-            prints "yup"
+        if hash_it.key?(num.to_s)
+            
             hash_it[num.to_s] = hash_it[num.to_s] + 1
         else
             # if not, add it to the hash_it
