@@ -8,7 +8,7 @@ def top_k_frequent(nums, k)
     frequency = []
 
     nums.each do |n|
-        count["n"] <= 1
+        count[n] = 1
     end
 
     return count
