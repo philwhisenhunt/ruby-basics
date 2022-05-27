@@ -5,6 +5,7 @@ def top_k_frequent(nums, k)
 
     # create a hash
     hash_it = {}
+    collection = []
     #iterate through array
     nums.each do |num|
          # for each one, check if it is in the hash
