@@ -11,6 +11,11 @@ def top_k_frequent(nums, k)
         count[n] = 1 + (count[n] || 0)
     end
 
+
+    count.each do |n, c|
+        
+    end
+
     return count
 
 end
