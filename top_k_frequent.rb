@@ -13,7 +13,7 @@ def top_k_frequent(nums, k)
 
 
     count.each do |n, c|
-        
+        print n
     end
 
     return count
