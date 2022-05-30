@@ -13,10 +13,11 @@ def top_k_frequent(nums, k)
 
 
     count.each do |n, c|
-        print n
+        # print n
+        frequency.append([c, n])
     end
 
-    return count
+    return frequency
 
 end
 nums = [1,1,1,2,2,3]
