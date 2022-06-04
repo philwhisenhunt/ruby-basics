@@ -18,7 +18,10 @@ def top_k_frequent(nums, k)
     end
     result = []
     # now we need to loop through the results K times
-    return frequency
+    k.times do
+        puts "."
+    end
+    # return frequency
 
 end
 nums = [1,1,1,2,2,3]
