@@ -17,7 +17,7 @@ def top_k_frequent(nums, k)
         frequency.append([c, n])
     end
     result = []
-
+    # now we need to loop through the results K times
     return frequency
 
 end
