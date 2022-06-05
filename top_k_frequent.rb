@@ -22,12 +22,13 @@ def top_k_frequent(nums, k)
     #     result.append(frequency[k])
     # end
     # result = frequency.first(k)
+    # frequency = frequency.sort()
     k.times do |i|
         result.append(frequency[i][1])
     end
-    return result
+    # return result
 
 end
-nums = [1,1,1,2,2,3]
-k = 2
+nums = [3,0,1,0]
+k = 1
 print top_k_frequent(nums, k)
