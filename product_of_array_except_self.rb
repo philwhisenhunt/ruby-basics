@@ -2,14 +2,14 @@ def product_except_self(nums)
     hash_it = {}
     products = []
     nums.each do |i|
-        nums = nums - [i]
+        instance_nums = nums - [i]
         # hash_it[i] = nums.inject(:*)
-        products.append(nums.inject(:*))
-        # puts i
+        products.append(instance_nums.inject(:*))
+       
     end
-    print products
+    return products
 end
 
 nums = [1,2,3,4]
 
-product_except_self(nums)
+print product_except_self(nums)
