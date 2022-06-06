@@ -28,9 +28,12 @@ def top_k_frequent(nums, k)
     # puts ""
     # puts number_of_results
     k.times do |i|
-        result.append(frequency[number_of_results - i])
+        i = i + 1
+        # puts "i is " + i.to_s
+        # print frequency[number_of_results - i]
+        result.append(frequency[number_of_results - i][1])
     end
-    # return result
+    return result
 
 end
 nums = [3,0,1,0]
