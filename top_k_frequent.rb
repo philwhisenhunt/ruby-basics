@@ -17,20 +17,12 @@ def top_k_frequent(nums, k)
         frequency.append([c, n])
     end
     result = []
-    # now we need to loop through the results K times
-    # k.times do
-    #     result.append(frequency[k])
-    # end
-    # result = frequency.first(k)
+
     frequency = frequency.sort
     number_of_results = frequency.count
-    # print frequency[number_of_results - 1]
-    # puts ""
-    # puts number_of_results
+
     k.times do |i|
         i = i + 1
-        # puts "i is " + i.to_s
-        # print frequency[number_of_results - i]
         result.append(frequency[number_of_results - i][1])
     end
     return result
