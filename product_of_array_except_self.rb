@@ -6,11 +6,11 @@ def product_except_self(nums)
         # instance_nums = nums - [i]
         puts i
         # print instance_nums
-        # instance_nums.delete_at(instance_nums.index(i))
+        instance_nums.delete_at(instance_nums.index(i))
         # print instance_nums
         # instance_nums = nums
         # hash_it[i] = nums.inject(:*)
-        # products.append(instance_nums.reject(&:nil?).inject(:*))
+        products.append(instance_nums.reject(&:nil?).inject(:*))
        
     end
     # return products
