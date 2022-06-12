@@ -6,6 +6,10 @@ def is_valid_sudoku(board)
         #check second three of first three rows (etc)
         # make a routine for this too? It will be repeated up to 9 total times
 
+
+        # once a number appears, we can't have it appear anymore. 
+        # Entonces, we can make a hash map and add to it as we scan through
+
 end
 
 board = 
