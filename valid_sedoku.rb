@@ -9,6 +9,10 @@ def is_valid_sudoku(board)
 
         # once a number appears, we can't have it appear anymore. 
         # Entonces, we can make a hash map and add to it as we scan through
+        # board.each
+            # scan for numers
+            # go ahead and save the number for each position 
+            # go ahead and save chunks of three too. 
 
 end
 
