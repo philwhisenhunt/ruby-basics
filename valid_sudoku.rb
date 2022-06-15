@@ -16,8 +16,11 @@ def is_valid_sudoku(board)
             across_hash = {}
             board.each_with_index do |b|
                 b.each_with_index do |n|
-                    print n
+                    if !across_hash[b]
+                        across_hash[b] = 1 
+                    end
                 end
+                print across_hash
             end
 
 
