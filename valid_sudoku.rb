@@ -15,8 +15,9 @@ def is_valid_sudoku(board)
             # go ahead and save chunks of three too. 
             across_hash = {}
             board.each_with_index do |b|
-                print b 
-                puts ""
+                b.each_with_index do |n|
+                    print n
+                end
             end
 
 
