@@ -16,6 +16,7 @@ def is_valid_sudoku(board)
             across_hash = {}
             board.each_with_index do |b|
                 print b 
+                puts ""
             end
 
 
