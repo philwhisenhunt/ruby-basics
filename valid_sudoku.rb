@@ -13,8 +13,9 @@ def is_valid_sudoku(board)
             # scan for numers
             # go ahead and save the number for each position 
             # go ahead and save chunks of three too. 
-            across_hash = {}
+           
             board.each_with_index do |b|
+                across_hash = {}
                 b.each_with_index do |n|
                     if n != "."
                    
