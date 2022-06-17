@@ -30,6 +30,11 @@ def is_valid_sudoku(board)
                       
                     end
                 end
+
+                #grab the first, second.. part of the array
+                # for 0..8 do |number|
+                #     b[number]
+                # end
                 print across_hash
                 puts ""
             end
