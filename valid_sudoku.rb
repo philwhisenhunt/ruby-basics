@@ -49,6 +49,12 @@ def is_valid_sudoku(board)
                 # print across_hash
                 print down_hash
                 puts ""
+
+                for x in 0..2 do 
+                    if b[x] != "."
+                        
+                    end
+                end
             end
 
 
