@@ -1,14 +1,18 @@
 def is_valid_sudoku_2(board)
 
-    horizontal = {}
-    vertical = {}
+   
     # triad_column
     board.each_with_index do |b, index|
+        horizontal = {}
+        vertical = {}
         # puts index.to_s + " is: " + b.to_s
 
         for n in 0..8 do
             # print b[n]
-            if !n == "."
+            if n == "."
+                next
+            end
+          
                 if !horizontal[b[n]]
                     horizontal[b[n]] = 1
                 else
@@ -23,12 +27,13 @@ def is_valid_sudoku_2(board)
 
                 # now just need triages
 
-            end
+            
         end
         print horizontal
         puts ""
         print vertical
     end
+   
 
 
 end
