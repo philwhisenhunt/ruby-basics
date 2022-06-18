@@ -41,20 +41,32 @@ def is_valid_sudoku(board)
                         else
                             down_hash[b[m]] += 1
                          
-                            print down_hash
+                            # print down_hash
                             return false
                         end
                     end
                 end
                 # print across_hash
-                print down_hash
-                puts ""
+                # print down_hash
+                # puts ""
 
+                triad_hash = {}
                 for x in 0..2 do 
+                    print b[x]
                     if b[x] != "."
-                        
+                        if !triad_hash[b[x]]
+                            triad_hash[b[x]]
+                            # system("say k")
+                        else
+                            triad_hash[b[x]] += 1
+                            system("say k")
+                            # print triad_hash
+                            # return false
+                        end
                     end
+                  
                 end
+                puts " ======"
             end
 
 
