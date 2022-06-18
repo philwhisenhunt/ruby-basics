@@ -8,7 +8,7 @@ def is_valid_sudoku_2(board)
 
         for n in 0..8 do
             # print b[n]
-            if n != "."
+            if !n == "."
                 if !horizontal[b[n]]
                     horizontal[b[n]] = 1
                 else
