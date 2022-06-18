@@ -35,10 +35,15 @@ def is_valid_sudoku(board)
 
                 down_hash = {}
                 for m in 0..8 do
-                    if !down_hash[b[m]]
-                        down_hash[b[m]] = 1
-                    else
-                        down_hash[b[m]] += 1
+                    if b[m] != "."
+                        if !down_hash[b[m]]
+                            down_hash[b[m]] = 1
+                        else
+                            down_hash[b[m]] += 1
+                         
+                            print down_hash
+                            return false
+                        end
                     end
                 end
                 # print across_hash
