@@ -72,7 +72,7 @@ def is_valid_sudoku(board)
                 second_triad_hash = {}
                 if index == 3 || index == 4 || index == 5
                  
-                    for x in 3..5 do 
+                    for x in 0..2 do 
                         if b[x] != "."
                             if !second_triad_hash[b[x]]
                                 second_triad_hash[b[x]]
@@ -92,7 +92,7 @@ def is_valid_sudoku(board)
                 third_triad_hash = {}
                 if index == 6 || index == 7 || index == 8
                  
-                    for x in 6..8 do 
+                    for x in 0..2 do 
                         if b[x] != "."
                             if !third_triad_hash[b[x]]
                                 third_triad_hash[b[x]]
