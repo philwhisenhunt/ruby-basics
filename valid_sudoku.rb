@@ -50,18 +50,57 @@ def is_valid_sudoku(board)
                 # print down_hash
                 # puts ""
 
-                triad_hash = {}
+                first_triad_hash = {}
                 if index == 0 || index == 1 || index == 2
                  
                     for x in 0..2 do 
                         if b[x] != "."
-                            if !triad_hash[b[x]]
-                                triad_hash[b[x]]
+                            if !first_triad_hash[b[x]]
+                                first_triad_hash[b[x]]
                                 
                             else
-                                triad_hash[b[x]] += 1
+                                first_triad_hash[b[x]] += 1
                               
-                                print triad_hash
+                                print first_triad_hash
+                                return false
+                            end
+                        end
+                    
+                    end
+                end
+
+                second_triad_hash = {}
+                if index == 3 || index == 4 || index == 5
+                 
+                    for x in 0..2 do 
+                        if b[x] != "."
+                            if !second_triad_hash[b[x]]
+                                second_triad_hash[b[x]]
+                                
+                            else
+                                second_triad_hash[b[x]] += 1
+                              
+                                print second_triad_hash
+                                return false
+                            end
+                        end
+                    
+                    end
+                end
+
+
+                third_triad_hash = {}
+                if index == 6 || index == 7 || index == 8
+                 
+                    for x in 0..2 do 
+                        if b[x] != "."
+                            if !third_triad_hash[b[x]]
+                                third_triad_hash[b[x]]
+                                
+                            else
+                                third_triad_hash[b[x]] += 1
+                              
+                                print third_triad_hash
                                 return false
                             end
                         end
