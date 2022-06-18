@@ -14,7 +14,7 @@ def is_valid_sudoku(board)
             # go ahead and save the number for each position 
             # go ahead and save chunks of three too. 
             
-            board.each_with_index do |b|
+            board.each_with_index do |b, index|
                 across_hash = {}
                 b.each_with_index do |n|
                     if n != "."
@@ -51,22 +51,25 @@ def is_valid_sudoku(board)
                 # puts ""
 
                 triad_hash = {}
-                for x in 0..2 do 
-                    print b[x]
-                    if b[x] != "."
-                        if !triad_hash[b[x]]
-                            triad_hash[b[x]]
-                            # system("say k")
-                        else
-                            triad_hash[b[x]] += 1
-                            system("say k")
-                            # print triad_hash
-                            # return false
+                if index == 0 || index == 1 || index == 2
+                    puts " ======"
+                    for x in 0..2 do 
+                        print b[x]
+                        if b[x] != "."
+                            if !triad_hash[b[x]]
+                                triad_hash[b[x]]
+                                # system("say k")
+                            else
+                                triad_hash[b[x]] += 1
+                                system("say k")
+                                # print triad_hash
+                                # return false
+                            end
                         end
+                    
                     end
-                  
                 end
-                puts " ======"
+                
             end
 
 
