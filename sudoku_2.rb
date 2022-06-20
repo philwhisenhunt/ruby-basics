@@ -1,10 +1,12 @@
 def is_valid_sudoku_2(board)
 
    
+    squares = {}
+    horizontal = {}
+    vertical = {}
     # triad_column
     board.each_with_index do |b, index|
-        horizontal = {}
-        vertical = {}
+       
         # puts index.to_s + " is: " + b.to_s
 
         for n in 0..8 do
@@ -25,6 +27,13 @@ def is_valid_sudoku_2(board)
                     vertical[b[n]] += 1
                 end
 
+                if !squares["#{index/3 n/3}"]
+                    squares["#{index/3 n/3}"] = 1
+                else
+                    squares["#{index/3 n/3}"] += 1
+                end
+
+
                 # now just need triages
 
             
@@ -32,6 +41,8 @@ def is_valid_sudoku_2(board)
         print horizontal
         puts ""
         print vertical
+        puts ""
+        print squares
     end
    
 
