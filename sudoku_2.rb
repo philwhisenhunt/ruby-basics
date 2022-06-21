@@ -27,10 +27,10 @@ def is_valid_sudoku_2(board)
                     vertical[b[n]] += 1
                 end
 
-                if !squares["#{index/3 n/3}"]
-                    squares["#{index/3 n/3}"] = 1
+                if !squares["#{index/3}#{n/3}"]
+                    squares["#{index/3}#{n/3}"] = 1
                 else
-                    squares["#{index/3 n/3}"] += 1
+                    squares["#{index/3}#{n/3}"] += 1
                 end
 
 
