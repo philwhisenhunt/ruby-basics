@@ -41,11 +41,11 @@ def is_valid_sudoku_2(board)
 
             
         end
-        print horizontal
-        puts ""
-        print vertical
-        puts ""
-        print squares
+        # print horizontal
+        # puts ""
+        # print vertical
+        # puts ""
+        # print squares
     end
    
 
