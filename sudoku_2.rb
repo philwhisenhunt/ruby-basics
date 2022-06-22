@@ -49,7 +49,7 @@ def is_valid_sudoku_2(board)
     end
    
 
-
+return true
 end
 
 
