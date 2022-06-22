@@ -19,18 +19,21 @@ def is_valid_sudoku_2(board)
                     horizontal[b[n]] = 1
                 else
                     horizontal[b[n]] += 1
+                    return false
                 end
 
                 if !vertical[b[n]]
                     vertical[b[n]] = 1
                 else
                     vertical[b[n]] += 1
+                    return false
                 end
 
                 if !squares["#{index/3}#{n/3}"]
                     squares["#{index/3}#{n/3}"] = 1
                 else
                     squares["#{index/3}#{n/3}"] += 1
+                    return false
                 end
 
 
