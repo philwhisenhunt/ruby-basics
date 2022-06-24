@@ -53,6 +53,7 @@ def is_valid_sudoku(board)
         # print vertical
         # puts ""
         # print squares
+       # Tried "#{index/3}#{n/3}".to_s
     end
    
 
