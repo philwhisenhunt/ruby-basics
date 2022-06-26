@@ -31,15 +31,15 @@ def is_valid_sudoku(board)
                     return false
                 end
 
-                if !squares["#{index/3}"-"#{n/3}"]
-                    squares["#{index/3}"-"#{n/3}"] = 1
+                if !squares["#{index/3}"+ "-" + "#{n/3}"]
+                    squares["#{index/3}"+ "-" + "#{n/3}"] = 1
                 else
-                    squares["#{index/3}"-"#{n/3}"] += 1
+                    squares["#{index/3}"+ "-" + "#{n/3}"] += 1
                     puts "It is this one"
                     puts "Index: " + index.to_s
                     puts "N: " + n.to_s
                     puts "Squares: " + squares["#{index/3}"+ "-" + "#{n/3}"].to_s
-                    puts "Interior: " + "#{index/3}#{n/3}"
+                    puts "Interior: " + "#{index/3}"+ "-" + "#{n/3}"
                     return false
                 end
 
