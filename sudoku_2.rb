@@ -6,7 +6,7 @@ def is_valid_sudoku(board)
     vertical = {}
     # triad_column
     board.each_with_index do |b, index|
-       
+ 
         # puts index.to_s + " is: " + b.to_s
 
         for n in 0..8 do
@@ -31,6 +31,9 @@ def is_valid_sudoku(board)
                     return false
                 end
 
+                index += 1
+                puts "Index is: " + index.to_s
+                puts "Index divded by 3 is: " + (index/3).to_s
                 if !squares["A#{index/3}"+ "-" + "#{n/3}"]
                     squares["A#{index/3}"+ "-" + "#{n/3}"] = 1
                 else
