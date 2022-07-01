@@ -35,8 +35,10 @@ def is_valid_sudoku(board)
                 puts "Index is: " + index.to_s
                 puts "Index divded by 3 is: " + (index/3).to_s
                 if !squares["A#{index/3}"+ "-" + "#{n/3}"]
+                    system("say hit the if")
                     squares["A#{index/3}"+ "-" + "#{n/3}"] = 1
                 else
+                    system("say hit the else")
                     #probably can't divide 0 by 3 here..
                     squares["A#{index/3}"+ "-" + "#{n/3}"] += 1
                     puts "It is this one"
