@@ -31,7 +31,7 @@ def is_valid_sudoku(board)
                     return false
                 end
 
-                index += 1
+               
                 puts "Index is: " + index.to_s
                 puts "Index divded by 3 is: " + (index/3).to_s
                 if !squares["A#{index/3}"+ "-" + "#{n/3}"]
@@ -48,7 +48,7 @@ def is_valid_sudoku(board)
                     puts "Interior: " + "A#{index/3}"+ "-" + "#{n/3}"
                     return false
                 end
-
+                index += 1
 
                 # now just need triages
 
