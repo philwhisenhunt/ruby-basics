@@ -34,9 +34,9 @@ def is_valid_sudoku(board)
                
                 # puts "Index is: " + index.to_s
                 # puts "Index divded by 3 is: " + (index/3).to_s
-                if !squares["#{index/3}"+ "-" + "#{n/3}"]&.include?(b)
+                if !squares["#{index/3}"+ "-" + "#{n/3}"]&.include?(b[n])
                     # need to compare to actual numbers that we are seeing.. not sure how yet
-                    squares["#{index/3}"+ "-" + "#{n/3}"] = [b]
+                    squares["#{index/3}"+ "-" + "#{n/3}"] = [b[n]]
                     puts squares["#{index/3}"+ "-" + "#{n/3}"]
                 else
                     return false
