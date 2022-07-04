@@ -12,40 +12,18 @@ def is_valid_sudoku(board)
         for n in 0..8 do
  
             if b[n] == "."
-        
+        print "[" + "." + "]"
                 next
             end
           
-            puts "b of n is: " + b[n].to_s
-            # print b[n]
-            # puts ""
-
-            if !squares["#{index/3}"+ "-" + "#{n/3}"]&.include?(b[n])
-                # need to compare to actual numbers that we are seeing.. not sure how yet
-                squares["#{index/3}"+ "-" + "#{n/3}"] = [b[n]]
-                # puts squares["#{index/3}"+ "-" + "#{n/3}"]
-                puts squares
-            else
-                # puts "ALERT+++"
-                # puts "b of n is: "
-                # print b[n]
-                # puts "==="
-                # puts squares["#{index/3}"+ "-" + "#{n/3}"]
-                # puts "+++"
-                puts "failed"
-                puts "b is: " + b.to_s
-                puts "n is: " + n.to_s
-                puts "index is: " + index.to_s
-                puts squares
-                return false
-
-            end
+            print "[" + b[n].to_s + "]"
         
             index += 1
 
 
             
         end
+        print "\n"
      
     end
    
