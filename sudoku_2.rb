@@ -10,57 +10,34 @@ def is_valid_sudoku(board)
         # puts index.to_s + " is: " + b.to_s
 
         for n in 0..8 do
-            # print b[n]
+ 
             if b[n] == "."
-                puts "YOO"
+        
                 next
             end
           
-                # if !horizontal[b[n]]
-                #     horizontal[b[n]] = 1
-                # else
-                #     horizontal[b[n]] += 1
-                #     puts horizontal[b[n]]
-                #     return false
-                # end
+     
+            if !squares["#{index/3}"+ "-" + "#{n/3}"]&.include?(b[n])
+                # need to compare to actual numbers that we are seeing.. not sure how yet
+                squares["#{index/3}"+ "-" + "#{n/3}"] = [b[n]]
+                puts squares["#{index/3}"+ "-" + "#{n/3}"]
+            else
+                puts "ALERT+++"
+                puts "b of n is: "
+                print b[n]
+                puts "==="
+                puts squares["#{index/3}"+ "-" + "#{n/3}"]
+                puts "+++"
+                return false
 
-                # if !vertical[b[n]]
-                #     vertical[b[n]] = 1
-                # else
-                #     vertical[b[n]] += 1
-                #     puts vertical[b[n]]
-                #     return false
-                # end
+            end
+        
+            index += 1
 
-               
-                # puts "Index is: " + index.to_s
-                # puts "Index divded by 3 is: " + (index/3).to_s
-                if !squares["#{index/3}"+ "-" + "#{n/3}"]&.include?(b[n])
-                    # need to compare to actual numbers that we are seeing.. not sure how yet
-                    squares["#{index/3}"+ "-" + "#{n/3}"] = [b[n]]
-                    puts squares["#{index/3}"+ "-" + "#{n/3}"]
-                else
-                    puts "ALERT+++"
-                    puts "b of n is: "
-                    print b[n]
-                    puts squares["#{index/3}"+ "-" + "#{n/3}"]
-                    puts "+++"
-                    return false
-
-                end
-         
-                index += 1
-
-                # now just need triages
 
             
         end
-        # print horizontal
-        # puts ""
-        # print vertical
-        # puts ""
-        # print squares
-       # Tried "#{index/3}#{n/3}".to_s
+     
     end
    
 
