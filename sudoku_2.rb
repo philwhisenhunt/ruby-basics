@@ -4,6 +4,7 @@ def is_valid_sudoku(board)
     squares = {}
     horizontal = {}
     vertical = {}
+    location = []
     # triad_column
     board.each_with_index do |b, index|
  
@@ -18,8 +19,8 @@ def is_valid_sudoku(board)
           
             print "[" + b[n].to_s + "]"
         
-            index += 1
-
+            location << [index, n]
+            # index += 1
 
             
         end
@@ -27,7 +28,8 @@ def is_valid_sudoku(board)
      
     end
    
-
+puts ""
+print location
 return true
 end
 
