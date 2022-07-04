@@ -11,25 +11,26 @@ def is_valid_sudoku(board)
 
         for n in 0..8 do
             # print b[n]
-            if n == "."
+            if b[n] == "."
+                puts "YOO"
                 next
             end
           
-                if !horizontal[b[n]]
-                    horizontal[b[n]] = 1
-                else
-                    horizontal[b[n]] += 1
-                    puts horizontal[b[n]]
-                    return false
-                end
+                # if !horizontal[b[n]]
+                #     horizontal[b[n]] = 1
+                # else
+                #     horizontal[b[n]] += 1
+                #     puts horizontal[b[n]]
+                #     return false
+                # end
 
-                if !vertical[b[n]]
-                    vertical[b[n]] = 1
-                else
-                    vertical[b[n]] += 1
-                    puts vertical[b[n]]
-                    return false
-                end
+                # if !vertical[b[n]]
+                #     vertical[b[n]] = 1
+                # else
+                #     vertical[b[n]] += 1
+                #     puts vertical[b[n]]
+                #     return false
+                # end
 
                
                 # puts "Index is: " + index.to_s
