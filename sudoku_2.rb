@@ -15,33 +15,33 @@ def is_valid_sudoku(board)
             if b[n] == "."
                 next
             end
-            if b[n] == "5"
-                print horizontal[n]
-                puts "_______"
-            end
+            # if b[n] == "5"
+            #     print horizontal[n]
+            #     puts "_______"
+            # end
 
          
-            if horizontal[n]&.include?(b[n])
+            if horizontal[n.to_s]&.include?(b[n].to_s)
                 return false
-            elsif horizontal[n]
-                horizontal[n] << b[n]
+            elsif horizontal[n.to_s]
+                horizontal[n.to_s] << b[n]
             else
-                horizontal[n] = [b[n]]
+                horizontal[n.to_s] = [b[n]]
             end
 
-            if vertical[n]&.include?(b[n])
+            if vertical[n.to_s]&.include?(b[n].to_s)
                 return false
-            elsif vertical[n]
-                vertical[n] << b[n]
+            elsif vertical[n.to_s]
+                vertical[n.to_s] << b[n]
             else
-                vertical[n] = [b[n]]
+                vertical[n.to_s] = [b[n]]
             end
 
-            if squares["#{index/3}"+ "-" + "#{n/3}"]&.include?(b[n])  
+            if squares["#{index/3}"+ "-" + "#{n/3}"]&.include?(b[n].to_s)  
                 return false
 
             elsif squares["#{index/3}"+ "-" + "#{n/3}"]
-                squares["#{index/3}"+ "-" + "#{n/3}"] << [b[n]]
+                squares["#{index/3}"+ "-" + "#{n/3}"] << b[n]
 
             else
                 squares["#{index/3}"+ "-" + "#{n/3}"] = [b[n]]
@@ -54,7 +54,11 @@ def is_valid_sudoku(board)
      
     end
   
- 
+ puts horizontal
+ puts ""
+ puts vertical
+ puts ""
+ puts squares
     return true
 end
 
