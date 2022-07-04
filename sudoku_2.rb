@@ -11,24 +11,23 @@ def is_valid_sudoku(board)
         # puts index.to_s + " is: " + b.to_s
 
         for n in 0..8 do
- 
+      
             if b[n] == "."
                 next
             end
 
-            if horizontal[b[n]] == 1
+            if horizontal[n]&.include?(b[n])
                 return false
             else
-                horizontal[b[n]] = 1
+                horizontal[n] = [b[n]]
             end
 
-            if vertical[b[n]] == 1
+            if vertical[n]&.include?(b[n])
                 return false
             else
-                vertical[b[n]] = 1
+                vertical[n] = [b[n]]
             end
-          
-            # print "[" + b[n].to_s + "]"
+
             if !squares["#{index/3}"+ "-" + "#{n/3}"]&.include?(b[n])
                 squares["#{index/3}"+ "-" + "#{n/3}"] = [b[n]]
             else
@@ -38,12 +37,9 @@ def is_valid_sudoku(board)
 
             
         end
-        print "\n"
      
     end
    
-# puts ""
-# print location
 return true
 end
 
