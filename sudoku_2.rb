@@ -11,10 +11,10 @@ def is_valid_sudoku(board)
 
         for n in 0..8 do
  
-            if b[n] == "."
-        print "[" + "." + "]"
-                next
-            end
+            # if b[n] == "."
+            #     print "[" + "." + "]"
+            #     next
+            # end
           
             print "[" + b[n].to_s + "]"
         
