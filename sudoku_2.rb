@@ -39,6 +39,11 @@ def is_valid_sudoku(board)
                     squares["#{index/3}"+ "-" + "#{n/3}"] = [b[n]]
                     puts squares["#{index/3}"+ "-" + "#{n/3}"]
                 else
+                    puts "ALERT+++"
+                    puts "b of n is: "
+                    print b[n]
+                    puts squares["#{index/3}"+ "-" + "#{n/3}"]
+                    puts "+++"
                     return false
 
                 end
