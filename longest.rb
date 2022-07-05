@@ -8,9 +8,22 @@ def longest_consecutive(nums)
             hash_it[n - 1] = 1
         end
 
-       
+        if nums.include?(n + 1)
+            hash_it[n] = 1
+            hash_it[n + 1] = 1
+        end
 
     end
+
+    counter = 0
+    for m in  0..hash_it.count
+        if hash_it[m] == 1
+            counter += 1
+        end
+        
+    end
+    return counter
+    # print hash_it
     # sort in order
 end
 
