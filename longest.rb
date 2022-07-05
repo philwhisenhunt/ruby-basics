@@ -1,6 +1,16 @@
 def longest_consecutive(nums)
+
+    hash_it = {}
     # take each number
-    # split it up in an array
+    nums.each do |n|
+        if nums.include?(n - 1)
+            hash_it[n] = 1
+            hash_it[n - 1] = 1
+        end
+
+       
+
+    end
     # sort in order
 end
 
