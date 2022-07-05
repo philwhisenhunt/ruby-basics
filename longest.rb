@@ -16,9 +16,18 @@ def longest_consecutive(nums)
     end
 
     counter = 0
+    high_score = 0
     for m in  0..hash_it.count
-        if hash_it[m] == 1
-            counter += 1
+
+        # if hash_it[m] < 1
+        #     next
+        # end
+        
+        counter += 1
+        
+
+        if counter > high_score
+            high_score = counter
         end
         
     end
