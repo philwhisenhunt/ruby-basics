@@ -21,12 +21,12 @@ def is_valid_sudoku(board)
             # end
 
          
-            if horizontal[n.to_s]&.include?(b[n].to_s)
+            if horizontal[index.to_s]&.include?(b[n].to_s)
                 return false
-            elsif horizontal[n.to_s]
-                horizontal[n.to_s] << b[n]
+            elsif horizontal[index.to_s]
+                horizontal[index.to_s] << b[n]
             else
-                horizontal[n.to_s] = [b[n]]
+                horizontal[index.to_s] = [b[n]]
             end
 
             if vertical[n.to_s]&.include?(b[n].to_s)
@@ -54,11 +54,11 @@ def is_valid_sudoku(board)
      
     end
   
- puts horizontal
- puts ""
- puts vertical
- puts ""
- puts squares
+#  puts horizontal
+#  puts ""
+#  puts vertical
+#  puts ""
+#  puts squares
     return true
 end
 
