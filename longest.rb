@@ -3,15 +3,16 @@ def longest_consecutive(nums)
     hash_it = {}
     # take each number
     nums.each do |n|
+        hash_it[n] = 1
+
         if nums.include?(n - 1)
-            hash_it[n] = 1
+            
             hash_it[n - 1] = 1
         else
             hash_it[n - 1] = 0
         end
 
         if nums.include?(n + 1)
-            hash_it[n] = 1
             hash_it[n + 1] = 1
         else
             hash_it[n + 1] = 0
@@ -23,7 +24,7 @@ def longest_consecutive(nums)
     high_score = 0
     for m in  0..hash_it.count
 
-        puts "hash_it is: " + hash_it[m].to_s
+        # puts "hash_it is: " + hash_it[m].to_s
         if !hash_it[m]
             next
         end
@@ -46,4 +47,6 @@ def longest_consecutive(nums)
 end
 
 nums = [0,3,7,2,5,8,4,6,0,1]
+nums = [100,4,200,1,3,2]
+nums = [0]
 print longest_consecutive(nums)
