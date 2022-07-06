@@ -6,11 +6,15 @@ def longest_consecutive(nums)
         if nums.include?(n - 1)
             hash_it[n] = 1
             hash_it[n - 1] = 1
+        else
+            hash_it[n - 1] = 0
         end
 
         if nums.include?(n + 1)
             hash_it[n] = 1
             hash_it[n + 1] = 1
+        else
+            hash_it[n + 1] = 0
         end
 
     end
@@ -19,9 +23,14 @@ def longest_consecutive(nums)
     high_score = 0
     for m in  0..hash_it.count
 
-        # if hash_it[m] < 1
-        #     next
-        # end
+        puts "hash_it is: " + hash_it[m].to_s
+        if !hash_it[m]
+            next
+        end
+
+        if hash_it[m] < 1
+            next
+        end
         
         counter += 1
         
@@ -31,7 +40,7 @@ def longest_consecutive(nums)
         end
         
     end
-    return counter
+    return high_score
     # print hash_it
     # sort in order
 end
