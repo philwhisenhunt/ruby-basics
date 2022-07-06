@@ -24,13 +24,11 @@ def longest_consecutive(nums)
     counter = 0
     high_score = 0
     for m in  0 - hash_it.count..hash_it.count
-    # puts "m is: " + m.to_s
-        # puts "hash_it is: " + hash_it[m].to_s
+
         if !hash_it[m]
             next
         end
-# puts "Hash_is m is: " + hash_it[m].to_s
-puts "hash_it[m] < 1 is: " + (hash_it[m] < 1).to_s
+
         if hash_it[m] < 1
             counter = 0
             next
