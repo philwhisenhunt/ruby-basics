@@ -1,10 +1,17 @@
 def longest_consecutive(nums)
 
     hash_it = {}
+    end_numbers = {}
+    start_numbers = {}
     # take each number
     nums.each do |n|
-        if(nums.include?(n-1) || nums.include?(n+1) )
-            hash_it[n] = 1
+
+        if(nums.include?(n+1) && !nums.include?(n-1) )
+            start_numbers[n] = 1
+        end
+
+        if(nums.include?(n-1) && !nums.include?(n+1) )
+            end_numbers[n] = 1
         end
             
     end
