@@ -19,29 +19,34 @@ def longest_consecutive(nums)
         end
 
     end
+    puts "hash_it: "
     puts hash_it
+
+    puts ""
+    puts "hash_it sorted: "
+    print hash_it.keys
 
     counter = 0
     high_score = 0
-    for m in  0 - hash_it.count..hash_it.count
+    # for m in  0 - hash_it.count..hash_it.count
 
-        if !hash_it[m]
-            next
-        end
+    #     if !hash_it[m]
+    #         next
+    #     end
 
-        if hash_it[m] < 1
-            counter = 0
-            next
-        end
+    #     if hash_it[m] < 1
+    #         counter = 0
+    #         next
+    #     end
         
-        counter += 1
+    #     counter += 1
         
 
-        if counter > high_score
-            high_score = counter
-        end
+    #     if counter > high_score
+    #         high_score = counter
+    #     end
         
-    end
+    # end
     return high_score
     # print hash_it
     # sort in order
