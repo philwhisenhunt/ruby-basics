@@ -3,12 +3,12 @@ def longest_consecutive(nums)
     hash_it = {}
     # take each number
     nums.each do |n|
-    #  check for lower until I don't find one
-
-    #  check for higher until I don't find one
-    #  add the counts together
+        if(nums.include?(n-1) || nums.include?(n+1) )
+            hash_it[n] = 1
+        end
             
     end
+    print hash_it.keys
  
    
 end
