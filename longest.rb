@@ -1,31 +1,19 @@
+require 'set'
+
 def longest_consecutive(nums)
+    num_set = nums.to_set
+    longest = 0
 
-    hash_it = {}
-    end_numbers = {}
-    start_numbers = {}
-    # take each number
     nums.each do |n|
-
-        if(nums.include?(n+1) && !nums.include?(n-1) )
-            start_numbers[n] = 1
-        end
-
-        # if(nums.include?(n-1) && !nums.include?(n+1) )
-        #     end_numbers[n] = 1
-        # end
-            
-    end
-counter = 0
-    start_numbers.each do |s|
-        
-        if nums.include?(s+1)
-            counter += 1
-            s += 1
+        if !num_set.include?(n -1 )
+            length = 0
+            while num_set.include?(n + length)
+                length += 1
+            end
+            longest = [length, longest].max
         end
     end
-    print start_numbers.keys
- 
-   
+    return longest
 end
 
 nums = [0,3,7,2,5,8,4,6,0,1]
