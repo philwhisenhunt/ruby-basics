@@ -2,8 +2,9 @@ def three_sum(nums)
     # for each number, find the other two that are needed
     # check nums for those numbers
 
-    #for loop the length of the array
-
+    # for loop the length of the array
+    # check the number and the one in the index next to it
+    # add the two together, and check the array for 0 minus that number
     
 end
 
