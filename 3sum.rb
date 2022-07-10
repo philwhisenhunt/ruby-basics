@@ -3,6 +3,8 @@ def three_sum(nums)
     # check nums for those numbers
 
     # for loop the length of the array
+    nums.each_with_index do |n, index|
+    end
     # check the number and the one in the index next to it
     # add the two together, and check the array for 0 minus that number
     
