@@ -5,6 +5,7 @@ def three_sum(nums)
     # for loop the length of the array
     nums.each_with_index do |n, index|
         checkpoint = n + nums[index + 1]
+        searchpoint = checkpoint - 0
     end
     # check the number and the one in the index next to it
     # add the two together, and check the array for 0 minus that number
