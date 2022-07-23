@@ -5,14 +5,17 @@ def three_sum(nums)
     agreeable_numbers = []
     # for loop the length of the array
     nums.each_with_index do |n, index|
-        checkpoint = n + nums[index + 1]
-        searchpoint = checkpoint - 0
-        if nums.include?(searchpoint)
-            # stash all the numbers
-            agreeable_numbers << searchpoint
-            agreeable_numbers << n #fix duplicate here
-            # or make agreeable_numbers uniq here
-            agreeable_numbers.uniq 
+        puts nums[index + 1]
+        if !nums[index + 1].nil?
+            checkpoint = n + nums[index + 1]
+            searchpoint = checkpoint - 0
+            if nums.include?(searchpoint)
+                # stash all the numbers
+                agreeable_numbers << searchpoint
+                agreeable_numbers << n #fix duplicate here
+                # or make agreeable_numbers uniq here
+                agreeable_numbers.uniq 
+            end
         end
     end
     # check the number and the one in the index next to it
