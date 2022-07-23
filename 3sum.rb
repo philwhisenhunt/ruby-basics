@@ -11,6 +11,8 @@ def three_sum(nums)
             # stash all the numbers
             agreeable_numbers << searchpoint
             agreeable_numbers << n #fix duplicate here
+            # or make agreeable_numbers uniq here
+            agreeable_numbers.uniq 
         end
     end
     # check the number and the one in the index next to it
