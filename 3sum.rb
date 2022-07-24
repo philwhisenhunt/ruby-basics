@@ -18,6 +18,7 @@ def three_sum(nums)
             end
         end
     end
+    agreeable_numbers
     # check the number and the one in the index next to it
     # add the two together, and check the array for 0 minus that number
     
