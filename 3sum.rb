@@ -10,9 +10,10 @@ def three_sum(nums)
             checkpoint = n + nums[index + 1]
             searchpoint = checkpoint - 0
             if nums.include?(searchpoint)
+                puts searchpoint
                 # stash all the numbers
                 agreeable_numbers << searchpoint
-                agreeable_numbers << n #fix duplicate here
+                # agreeable_numbers << n #fix duplicate here
                 # or make agreeable_numbers uniq here
                 agreeable_numbers.uniq 
             end
