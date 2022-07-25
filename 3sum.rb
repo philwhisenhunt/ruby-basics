@@ -5,7 +5,7 @@ def three_sum(nums)
     agreeable_numbers = []
     # for loop the length of the array
     nums.each_with_index do |n, index|
-        puts nums[index + 1]
+        # puts nums[index + 1]
         if !nums[index + 1].nil?
             checkpoint = n + nums[index + 1]
             searchpoint = checkpoint - 0
