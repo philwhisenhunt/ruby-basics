@@ -3,6 +3,7 @@ def three_sum(nums)
     # check nums for those numbers
 
     agreeable_numbers = []
+    added_count = 0
     # for loop the length of the array
     nums.each_with_index do |n, index|
         # puts nums[index + 1]
@@ -13,6 +14,7 @@ def three_sum(nums)
                 # puts searchpoint
                 # stash all the numbers
                 agreeable_numbers << searchpoint
+                added_count += 1
                 # agreeable_numbers << n #fix duplicate here
                 # or make agreeable_numbers uniq here
                 agreeable_numbers.uniq 
