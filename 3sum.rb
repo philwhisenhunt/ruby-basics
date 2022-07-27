@@ -20,6 +20,7 @@ def three_sum(nums)
                 agreeable_numbers.uniq 
             end
             #make a new final array here
+            #or cycle through array and export them three at a time
         end
     end
     agreeable_numbers
