@@ -13,7 +13,7 @@ def three_sum(nums)
             if nums.include?(searchpoint)
                 # puts searchpoint
                 # stash all the numbers
-                agreeable_numbers << searchpoint
+                agreeable_numbers << [searchpoint]
                 added_count += 1
                 # agreeable_numbers << n #fix duplicate here
                 # or make agreeable_numbers uniq here
