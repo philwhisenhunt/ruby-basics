@@ -19,6 +19,7 @@ def three_sum(nums)
                 # or make agreeable_numbers uniq here
                 agreeable_numbers.uniq 
             end
+            #make a new final array here
         end
     end
     agreeable_numbers
