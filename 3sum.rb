@@ -4,10 +4,11 @@ def three_sum(nums)
 
     agreeable_numbers = []
     added_count = 0
+    no_fly_list = []
     # for loop the length of the array
     nums.each_with_index do |n, index|
         # puts nums[index + 1]
-        if !nums[index + 1].nil?
+        if !nums[index + 1].nil? && !no_fly_list.include?(n)
             checkpoint = n + nums[index + 1]
             searchpoint = 0 - checkpoint 
             if nums.include?(searchpoint)
@@ -15,6 +16,8 @@ def three_sum(nums)
                 # stash all the numbers
                 agreeable_numbers << [checkpoint, searchpoint, nums[index + 1]]
                 added_count += 1
+                no_fly_list << n
+                no_fly_list << searchpoint
                 # agreeable_numbers << n #fix duplicate here
                 # or make agreeable_numbers uniq here
                 next
