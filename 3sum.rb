@@ -17,8 +17,9 @@ def three_sum(nums)
                 added_count += 1
                 # agreeable_numbers << n #fix duplicate here
                 # or make agreeable_numbers uniq here
-                
+                next
             end
+            next
             #make a new final array here
             #or cycle through array and export them three at a time
         end
