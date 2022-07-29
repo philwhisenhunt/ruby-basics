@@ -19,6 +19,8 @@ def three_sum(nums)
                 # or make agreeable_numbers uniq here
                 next
             end
+            # consider adding a nofly list to skip numbers
+            # if !no_fly_list.include?(n)
             next
             #make a new final array here
             #or cycle through array and export them three at a time
