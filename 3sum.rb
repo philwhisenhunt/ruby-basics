@@ -9,7 +9,7 @@ def three_sum(nums)
         # puts nums[index + 1]
         if !nums[index + 1].nil?
             checkpoint = n + nums[index + 1]
-            searchpoint = checkpoint - 0
+            searchpoint = 0 - checkpoint 
             if nums.include?(searchpoint)
                 # puts searchpoint
                 # stash all the numbers
@@ -17,13 +17,14 @@ def three_sum(nums)
                 added_count += 1
                 # agreeable_numbers << n #fix duplicate here
                 # or make agreeable_numbers uniq here
-                agreeable_numbers.uniq 
+                
             end
             #make a new final array here
             #or cycle through array and export them three at a time
         end
     end
-    agreeable_numbers
+    return agreeable_numbers.uniq 
+    # agreeable_numbers
     # check the number and the one in the index next to it
     # add the two together, and check the array for 0 minus that number
     
