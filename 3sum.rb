@@ -9,9 +9,10 @@ def three_sum(nums)
     nums.each_with_index do |n, index|
         # puts nums[index + 1]
         if !nums[index + 1].nil? 
+            #this instead needs to check all the other numbers
             checkpoint = n + nums[index + 1]
             searchpoint = 0 - checkpoint 
-            puts !nums.include?(searchpoint) 
+            # puts !nums.include?(searchpoint) 
             if nums.include?(searchpoint) && !no_fly_list.include?(searchpoint) 
                 # puts searchpoint
                 # stash all the numbers
