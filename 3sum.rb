@@ -16,7 +16,7 @@ def three_sum(nums)
                 # puts searchpoint
                 # stash all the numbers
                 agreeable_numbers << [checkpoint, searchpoint, nums[index + 1]]
-                added_count += 1
+                
                 no_fly_list << n
                 no_fly_list << searchpoint
                 # agreeable_numbers << n #fix duplicate here
