@@ -10,6 +10,8 @@ def three_sum(nums)
         # puts nums[index + 1]
         if !nums[index + 1].nil? 
             #this instead needs to check all the other numbers
+            # or we could all of them in, sorted
+            #then remove dupes
             checkpoint = n + nums[index + 1]
             searchpoint = 0 - checkpoint 
             # puts !nums.include?(searchpoint) 
