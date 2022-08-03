@@ -18,7 +18,7 @@ def three_sum(nums)
             if nums.include?(searchpoint) && !no_fly_list.include?(searchpoint) 
                 # puts searchpoint
                 # stash all the numbers
-                agreeable_numbers << [checkpoint, searchpoint, nums[index + 1]]
+                agreeable_numbers << [checkpoint, searchpoint, nums[index + 1]].sort
                 
                 no_fly_list << n
                 no_fly_list << searchpoint
