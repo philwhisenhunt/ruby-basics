@@ -15,12 +15,12 @@ def three_sum(nums)
             checkpoint = n + nums[index + 1]
             searchpoint = 0 - checkpoint 
             # puts !nums.include?(searchpoint) 
-            if nums.include?(searchpoint) && !no_fly_list.include?(searchpoint) 
+            if nums.include?(searchpoint) && !no_fly_list.include?(index) 
                 # puts searchpoint
                 # stash all the numbers
                 agreeable_numbers << [checkpoint, searchpoint, nums[index + 1]].sort
                 
-                no_fly_list << n
+                no_fly_list << index
                 no_fly_list << searchpoint
                 # agreeable_numbers << n #fix duplicate here
                 # or make agreeable_numbers uniq here
