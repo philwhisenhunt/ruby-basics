@@ -14,13 +14,16 @@ def three_sum(nums)
             #then remove dupes
 
             # we need to alter how we search here, not just do the number next to it
-            checkpoint = n + nums[index + 1]
-            searchpoint = 0 - checkpoint 
+            # better yet, alter the checkpoint, so that each number gets subtracted from zero then added to a new array
+            checkpoint = 0 - n
+            
             # puts !nums.include?(searchpoint) 
-            if nums.include?(searchpoint) && !no_fly_list.include?(index) 
+            if nums.include?(checkpoint) && !no_fly_list.include?(index) 
                 # puts searchpoint
                 # stash all the numbers
-                agreeable_numbers << [checkpoint, searchpoint, nums[index + 1]].sort
+
+                # this needs to include the third number somehow
+                agreeable_numbers << [checkpoint, n].sort
                 
                 no_fly_list << index
                 no_fly_list << searchpoint
@@ -28,6 +31,7 @@ def three_sum(nums)
                 # or make agreeable_numbers uniq here
                 
             end
+            checkpoint_array << checkpoint
             # consider adding a nofly list to skip numbers
             # if !no_fly_list.include?(n)
           
