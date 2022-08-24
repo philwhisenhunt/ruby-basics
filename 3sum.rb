@@ -40,7 +40,7 @@ def three_sum(nums)
             #or cycle through array and export them three at a time
         end
     end
-    return agreeable_numbers.uniq 
+    return agreeable_numbers
     # agreeable_numbers
     # check the number and the one in the index next to it
     # add the two together, and check the array for 0 minus that number
