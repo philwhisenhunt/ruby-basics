@@ -26,7 +26,7 @@ def three_sum(nums)
                 agreeable_numbers << [checkpoint, n].sort
                 
                 no_fly_list << index
-                no_fly_list << searchpoint
+                # no_fly_list << searchpoint
                 # agreeable_numbers << n #fix duplicate here
                 # or make agreeable_numbers uniq here
                 
