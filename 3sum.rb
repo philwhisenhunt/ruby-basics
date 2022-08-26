@@ -7,7 +7,10 @@ def three_sum(nums)
     checkpoint_array = []
  
     nums.each_with_index do |n, index|
-   
+        target = 0 - n
+
+        # then search the rest of the array for numbers 
+        # that together equal the target
       
     end
     return agreeable_numbers.uniq 
