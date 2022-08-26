@@ -8,7 +8,8 @@ def three_sum(nums)
     checkpoint_array = []
     # for loop the length of the array
     nums.each_with_index do |n, index|
-        # puts nums[index + 1]
+        if nums.include?(n + 0)
+        end
       
     end
     return agreeable_numbers.uniq 
