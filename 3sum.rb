@@ -13,6 +13,10 @@ def three_sum(nums)
         # then search the rest of the array for numbers 
         # that together equal the target
         # maybe store the target along with its index location?
+
+        # For every number
+        # Check all the other numbers and add it to the first number
+        # Then check if the array includes 0 minus that number
       
     end
     return list_of_targets
