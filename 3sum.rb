@@ -18,6 +18,8 @@ def three_sum(nums)
         # Check all the other numbers and add it to the first number
         # Then check if the array includes 0 minus that number
       
+        # could we check the list_of_targets each time too?
+        list_of_targets.include?(n)
     end
     return list_of_targets
 
