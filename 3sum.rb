@@ -6,6 +6,7 @@ def three_sum(nums)
     no_fly_list = []
     checkpoint_array = []
     list_of_targets = {}
+    trio = []
  
     nums.each_with_index do |n, index|
         target = 0 - n
@@ -19,7 +20,9 @@ def three_sum(nums)
         # Then check if the array includes 0 minus that number
       
         # could we check the list_of_targets each time too?
-        list_of_targets.include?(n)
+        if list_of_targets.include?(n)
+            trio << [n]
+        end
     end
     return list_of_targets
 
