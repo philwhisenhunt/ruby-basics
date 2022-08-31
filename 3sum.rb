@@ -20,9 +20,10 @@ def three_sum(nums)
         # Then check if the array includes 0 minus that number
       
         # could we check the list_of_targets each time too?
-        if list_of_targets.include?(n)
-            trio << n
-            trio << target
+        if list_of_targets.include?(n) && list_of_targets.include?(0)
+            trio << n, target, 0
+        
+        
         end
     end
     return list_of_targets
