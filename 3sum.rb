@@ -21,7 +21,7 @@ def three_sum(nums)
       
         # could we check the list_of_targets each time too?
         if list_of_targets.include?(n) && list_of_targets.include?(0)
-            trio << n, target, 0
+            trio << [n, target, 0]
         
         
         end
