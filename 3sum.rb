@@ -23,7 +23,7 @@ def three_sum(nums)
         if list_of_targets.include?(n) && list_of_targets.include?(0)
             trio << [n, target, 0]
         end
-
+        list_of_targets << trio
         # then go through each number and see if it can be added to another in the list to equal the opposite of n?
     end
     return list_of_targets
