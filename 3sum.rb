@@ -7,6 +7,7 @@ def three_sum(nums)
     checkpoint_array = []
     list_of_targets = {}
     trio = []
+    final_array = []
  
     nums.each_with_index do |n, index|
         target = 0 - n
@@ -23,10 +24,10 @@ def three_sum(nums)
         if list_of_targets.include?(n) && list_of_targets.include?(0)
             trio << [n, target, 0]
         end
-        list_of_targets << trio
+        final_array << trio
         # then go through each number and see if it can be added to another in the list to equal the opposite of n?
     end
-    return list_of_targets
+    return final_array
 
     
 end
