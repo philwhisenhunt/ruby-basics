@@ -25,6 +25,7 @@ def three_sum(nums)
             trio << [n, target, 0]
         end
         final_array << trio
+        final_array  = final_array.uniq
         # then go through each number and see if it can be added to another in the list to equal the opposite of n?
     end
     return final_array
