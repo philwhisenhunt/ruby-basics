@@ -24,6 +24,8 @@ def three_sum(nums)
         if list_of_targets.include?(n) && list_of_targets.include?(0)
             trio << [n, target, 0].sort
         end
+
+        # what if while we are doing the first check we also subtract each number in the list of targets?
         final_array << trio
         #should we sort trio too?
         final_array  = final_array.uniq
