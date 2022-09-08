@@ -26,6 +26,7 @@ def three_sum(nums)
         end
 
         # what if while we are doing the first check we also subtract each number in the list of targets?
+        # Is there a way to do this without running another .each loop?
         final_array << trio
         #should we sort trio too?
         final_array  = final_array.uniq
