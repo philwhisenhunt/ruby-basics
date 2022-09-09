@@ -10,9 +10,13 @@ nums = nums.sort
 while (first < last) do
    
     sum = nums[first] + nums[last]
+    if nums[first] == nums[last]
+        break
+    end
     negative = 0 - sum
     if nums.include?(negative)
         triplet = [negative, nums[first], nums[last]]
+        
         # puts triplet
         last -= 1
         first += 1
