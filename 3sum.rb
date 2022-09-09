@@ -6,7 +6,7 @@ last = nums.count - 1
 triplet = []
 final_array = []
 sum = nil
-
+nums = nums.sort
 while (first < last) do
    
     sum = nums[first] + nums[last]
@@ -21,10 +21,10 @@ while (first < last) do
         first += 1
         # how to get rid of the rest of them?
     end
-    final_array << triplet
+    final_array << triplet.sort
 end
 
-return final_array
+return final_array.uniq
 end
 
 nums = [-1,0,1,2,-1,-4]
