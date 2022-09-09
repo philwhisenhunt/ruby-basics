@@ -8,15 +8,21 @@ final_array = []
 sum = nil
 
 while (first < last) do
+    puts first
+    puts last
     sum = nums[first] + nums[last]
-    if nums.include?(sum)
-        triplet << [sum, nums[first], nums[last]]
-        final_array << triplet
-        break
+    negative = 0 - sum
+    if nums.include?(negative)
+        triplet << [negative, nums[first], nums[last]]
+        
+        last -= 1
+        first += 1
     else
+        last -= 1
+        first += 1
         # how to get rid of the rest of them?
     end
-
+    final_array << triplet
 end
 
 return final_array
