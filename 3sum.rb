@@ -18,13 +18,14 @@ while (first < last) do
         triplet = [negative, nums[first], nums[last]]
       
         # puts triplet
-        last -= 1
+      
+    elsif sum > 0
+        
         first += 1
-    else
+    elsif sum < 0
         last -= 1
-        first += 1
-        # how to get rid of the rest of them?
     end
+
     final_array << triplet if !triplet.empty?
 end
 
