@@ -9,21 +9,15 @@ sum = nil
 nums = nums.sort
 while (first < last) do
    
-    sum = nums[first] + nums[last]
-   
-    negative = 0 - sum
-
+ 
     # here we need to not check for itself.. 
-    if nums.include?(negative) && negative != nums[first] && negative != nums[last]
-        triplet = [negative, nums[first], nums[last]]
-      
-        # puts triplet
-      
-    elsif sum > 0
-        
+    sum = nums[first] + nums[last]
+    if sum > 0
         first += 1
     elsif sum < 0
         last -= 1
+    else
+        triplet = [negative, nums[first], nums[last]]
     end
 
     final_array << triplet if !triplet.empty?
