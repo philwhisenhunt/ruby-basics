@@ -12,11 +12,11 @@ while (first < last) do
     sum = nums[first] + nums[last]
    
     negative = 0 - sum
-    if nums.include?(negative)
+
+    # here we need to not check for itself.. 
+    if nums.include?(negative) && negative != nums[first] && negative != nums[last]
         triplet = [negative, nums[first], nums[last]]
-        if triplet.uniq.count < 3
-            triplet = nil
-        end
+      
         # puts triplet
         last -= 1
         first += 1
@@ -25,7 +25,7 @@ while (first < last) do
         first += 1
         # how to get rid of the rest of them?
     end
-    final_array << triplet&.sort
+    final_array << triplet if !triplet.empty?
 end
 
 return final_array.uniq
