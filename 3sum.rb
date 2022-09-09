@@ -8,13 +8,12 @@ final_array = []
 sum = nil
 
 while (first < last) do
-    puts first
-    puts last
+   
     sum = nums[first] + nums[last]
     negative = 0 - sum
     if nums.include?(negative)
-        triplet << [negative, nums[first], nums[last]]
-        
+        triplet = [negative, nums[first], nums[last]]
+        # puts triplet
         last -= 1
         first += 1
     else
