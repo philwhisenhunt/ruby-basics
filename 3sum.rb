@@ -7,11 +7,14 @@ triplet = []
 final_array = []
 sum = nil
 nums = nums.sort
+nums.each do |num|
+
+end
 while (first < last) do
    
  
     # here we need to not check for itself.. 
-    sum = nums[first] + nums[last]
+    sum = nums[first] + nums[last] 
     if sum > 0
         first += 1
     elsif sum < 0
