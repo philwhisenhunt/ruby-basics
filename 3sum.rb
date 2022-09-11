@@ -8,7 +8,8 @@ final_array = []
 sum = nil
 nums = nums.sort
 nums.each do |num|
-
+    while (first < last )
+        sum = nums[first] + nums[last] + num
 end
 while (first < last) do
    
