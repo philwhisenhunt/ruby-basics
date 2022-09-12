@@ -10,6 +10,11 @@ nums = nums.sort
 nums.each do |num|
     while (first < last )
         sum = nums[first] + nums[last] + num
+
+        if sum > 0
+            first += 1
+        end
+    end
 end
 while (first < last) do
    
