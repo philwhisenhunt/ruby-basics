@@ -13,6 +13,8 @@ nums.each do |num|
 
         if sum > 0
             first += 1
+        elsif sum < 0
+            last -= 1
         end
     end
 end
