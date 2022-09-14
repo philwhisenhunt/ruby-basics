@@ -15,6 +15,8 @@ nums.each do |num|
             first += 1
         elsif sum < 0
             last -= 1
+        elsif sum == 0
+            final_array << sum
         end
     end
 end
