@@ -7,10 +7,18 @@ triplet = []
 final_array = []
 sum = nil
 nums = nums.sort
+print nums
+puts ""
 nums.each do |num|
     while (first < last )
         sum = nums[first] + nums[last] + num
-
+        if num == nums[first] || num == nums[last]
+            first += 1
+            next
+        end
+        print "Sum is "
+        print sum
+        puts ""
         if sum > 0
             first += 1
         elsif sum < 0
