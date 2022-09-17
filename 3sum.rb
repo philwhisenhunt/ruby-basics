@@ -11,11 +11,12 @@ print nums
 puts ""
 nums.each do |num|
     while (first < last )
-        sum = nums[first] + nums[last] + num
         if num == nums[first] || num == nums[last]
             first += 1
             next
         end
+        sum = nums[first] + nums[last] + num
+       
         print "Sum is "
         print sum
         puts ""
