@@ -20,13 +20,17 @@ nums.each do |num|
         print "Sum is "
         print sum
         puts ""
+
+        print "Nums first is "
+        print nums[first]
+        puts ""
         if sum > 0
-            first += 1
-        elsif sum < 0
             last -= 1
+        elsif sum < 0
+            first += 1
         elsif sum == 0
             final_array << [nums[first], nums[last], num]
-            puts final_array
+            # puts final_array
         end
     end
 end
