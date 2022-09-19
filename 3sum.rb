@@ -26,6 +26,7 @@ nums.each do |num|
             last -= 1
         elsif sum == 0
             final_array << [nums[first], nums[last], num]
+            puts final_array
         end
     end
 end
