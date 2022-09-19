@@ -29,21 +29,6 @@ nums.each do |num|
         end
     end
 end
-# while (first < last) do
-   
- 
-#     # here we need to not check for itself.. 
-#     sum = nums[first] + nums[last] 
-#     if sum > 0
-#         first += 1
-#     elsif sum < 0
-#         last -= 1
-#     else
-#         triplet = [negative, nums[first], nums[last]]
-#     end
-
-#     final_array << triplet if !triplet.empty?
-# end
 
 return final_array.uniq
 end
