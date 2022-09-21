@@ -1,9 +1,10 @@
 def three_sum(nums)
  
 res = []
-nums.sort()
+nums = nums.sort()
+# print nums
 nums.each_with_index do |num, index|
-    if num > 0 && num == nums[index - 1]
+    if index > 0 && num == nums[index - 1]
         next
     end
         l = index + 1
@@ -11,24 +12,24 @@ nums.each_with_index do |num, index|
 
         while l < r
 
-            print "l is " 
-            puts l
+            # print "l is " 
+            # puts l
 
-            print "r is " 
-            puts r
-            print "Num is: "
-            puts num
+            # print "r is " 
+            # puts r
+            # print "Num is: "
+            # puts num
 
-            print "Num[l] is: "
-            puts num[l]
+            # print "Num[l] is: "
+            # puts num[l]
 
             
-            print "Num[r] is: "
-            puts num[r]
+            # print "Num[r] is: "
+            # puts num[r]
 
 
             threeSum = num + nums[l] + nums[r]
-            puts threeSum
+            # puts threeSum
 
             if threeSum > 0
                 r -= 1
@@ -45,10 +46,11 @@ nums.each_with_index do |num, index|
 
         end
    
-    # puts num
+    # print res
 end
 return res
 end
 
 nums = [-1,0,1,2,-1,-4]
+# nums = [-4, -1, -1, 0, 1, 2]
 print three_sum(nums)
