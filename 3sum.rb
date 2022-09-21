@@ -1,41 +1,18 @@
 def three_sum(nums)
  
+res = []
+nums.sort()
+nums.each do |num, index|
+    if num > 0 && num == nums[i - 1]
+        l = i + 1
+        r = nums.length - 1
 
-first = 0
-last = nums.count - 1
-triplet = []
-final_array = []
-sum = nil
-nums = nums.sort
-print nums
-puts ""
-nums.each do |num|
-    while (first < last )
-        if num == nums[first] || num == nums[last]
-            first += 1
-            next
-        end
-        sum = nums[first] + nums[last] + num
-       
-        print "Sum is "
-        print sum
-        puts ""
-
-        print "Nums first is "
-        print nums[first]
-        puts ""
-        if sum > 0
-            last -= 1
-        elsif sum < 0
-            first += 1
-        elsif sum == 0
-            final_array << [nums[first], nums[last], num]
-            # puts final_array
+        while l < r
+            threeSum = a + nums[l] + nums[r]
         end
     end
 end
 
-return final_array.uniq
 end
 
 nums = [-1,0,1,2,-1,-4]
