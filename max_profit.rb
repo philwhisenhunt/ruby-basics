@@ -1,29 +1,34 @@
 def max_profit(prices)
     # for everything in the prices array
-    high = nil
-    low = nil
-    high_location = nil
-    low_location = nil
+    max_profit = nil
+    profit = nil
+    l = nil
+    r = nil
     prices.each_with_index do |price, index|
-
-        # set the first one as the high and the low
         if index == 0
-            high = prices[index] 
-            low = prices[prices.length - 1]
-            high_location = index
-            low_location = index
-            puts "low_location is " + low_location.to_s
+            l = price
         end
-      
-        if price > high && index > high_location
-            high = price
-        elsif price < low && index > low_location && low_location < high_location
-            low = price
+
+        if index == 1
+            r = price
+            max_profit = r - l
+        end
+
+        if index >= 2
+            profit = r - l
+        
+
+            if profit > max_profit
+                max_profit = profit
+            end
+            
+            if price > r
+                r = price
+            end
         end
    
-
     end
-    return high - low
+    return max_profit
 end
     
 prices = [7,1,5,3,6,4]
