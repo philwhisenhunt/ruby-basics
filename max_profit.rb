@@ -15,17 +15,12 @@ def max_profit(prices)
             puts "low_location is " + low_location.to_s
         end
       
-        if price > high
-            if index > high_location
-                high = price
-            end
-        elsif price < low
-
-            if index < low_location
-                low = price
-                low_location = index
-            end
+        if price > high && index > high_location
+            high = price
+        elsif price < low && index > low_location && low_location < high_location
+            low = price
         end
+   
 
     end
     return high - low
