@@ -21,7 +21,7 @@ def max_profit(prices)
         # if lower, change lowest
         # if higher, change highest
         end
-    return [low, high]
+    return high - low
 end
     
 prices = [7,1,5,3,6,4]
