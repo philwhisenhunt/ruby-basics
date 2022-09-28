@@ -8,7 +8,7 @@ def max_profit(prices)
     while r < prices.length
         
         if prices[l] < prices[r]
-            
+            profit = prices[r] = prices[l]
         end
     end
     # prices.each_with_index do |price, index|
