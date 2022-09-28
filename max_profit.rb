@@ -1,47 +1,22 @@
 def max_profit(prices)
     # for everything in the prices array
     max_profit = 0
-    profit = 0
+    # profit = 0
     l = 0
     r = 1
 
-    while r < prices.length
+    puts prices.length
+    while r < (prices.length) do
         
         if prices[l] < prices[r]
-            profit = prices[r] = prices[l]
+            profit = prices[r] - prices[l]
+            max_profit = [max_profit, profit].max()
+        else
+            l = r
+            r += 1
         end
-
-        if profit > max_profit
-            max_profit = profit
-        end
-
-
-        r += 1
+       
     end
-    # prices.each_with_index do |price, index|
-    #     if index == 0
-    #         l = price
-    #     end
-
-    #     if index == 1
-    #         r = price
-    #         max_profit = r - l
-    #     end
-
-    #     if index >= 2
-    #         profit = r - l
-        
-
-    #         if profit > max_profit
-    #             max_profit = profit
-    #         end
-            
-    #         if price > r
-    #             r = price
-    #         end
-    #     end
-   
-    # end
     return max_profit
 end
     
