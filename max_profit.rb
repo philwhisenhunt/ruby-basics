@@ -1,7 +1,7 @@
 def max_profit(prices)
     # for everything in the prices array
     max_profit = 0
-    profit = nil
+    profit = 0
     l = 0
     r = 1
 
@@ -10,6 +10,13 @@ def max_profit(prices)
         if prices[l] < prices[r]
             profit = prices[r] = prices[l]
         end
+
+        if profit > max_profit
+            max_profit = profit
+        end
+
+
+        r += 1
     end
     # prices.each_with_index do |price, index|
     #     if index == 0
