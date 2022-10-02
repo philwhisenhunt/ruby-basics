@@ -1,4 +1,11 @@
 def length_of_longest_substring(s)
     #loop through until repeat
     #at repeat, stop and restart, but store how long the last run was
+
+    # s = #s to array
+    # s.each_with_index do |r, index|
+    #     if r != s
+    #         continue
+    #     end
+    # end
 end
