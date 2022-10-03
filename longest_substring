@@ -8,4 +8,10 @@ def length_of_longest_substring(s)
     #         continue
     #     end
     # end
+
+    now_array = s.split('')
+    print now_array
 end
+
+s = "abcabcbb"
+puts length_of_longest_substring(s)
