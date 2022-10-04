@@ -10,7 +10,19 @@ def length_of_longest_substring(s)
     # end
 
     now_array = s.split('')
+    used_letters = []
+    longest_so_far = []
     print now_array
+
+    now_array.each_with_index do |letter, index|
+        if used_letters.includes?(letter)
+            return longest_so_far.to_s
+        end
+
+        #end by adding used letter to list
+        used_letters << letter
+        longest_so_far << letter
+    end
 end
 
 s = "abcabcbb"
