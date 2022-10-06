@@ -20,8 +20,8 @@ def length_of_longest_substring(s)
         end
 
         #end by adding used letter to list
-        used_letters << letter
         longest_so_far << letter
+        used_letters << letter
     end
 end
 
