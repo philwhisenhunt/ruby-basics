@@ -16,7 +16,7 @@ def length_of_longest_substring(s)
 
     now_array.each_with_index do |letter, index|
         if used_letters.include?(letter)
-            return longest_so_far.to_s
+            return longest_so_far.to_s #this needs to merge
         end
 
         #end by adding used letter to list
