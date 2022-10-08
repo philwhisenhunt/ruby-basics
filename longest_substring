@@ -26,4 +26,5 @@ def length_of_longest_substring(s)
 end
 
 s = "abcabcbb"
+s = "abcabcbbabcd"
 puts length_of_longest_substring(s)
