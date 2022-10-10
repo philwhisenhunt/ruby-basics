@@ -16,13 +16,15 @@ def length_of_longest_substring(s)
 
     now_array.each_with_index do |letter, index|
         if used_letters.include?(letter)
-            return longest_so_far.join("") #this needs to merge
+             longest_so_far #this needs to merge
+             used_letters = []
         end
 
         #end by adding used letter to list
         longest_so_far << letter
         used_letters << letter
     end
+    return longest_so_far.join("")
 end
 
 s = "abcabcbb"
