@@ -23,10 +23,15 @@ def length_of_longest_substring(s)
         #end by adding used letter to list
         longest_so_far << letter
         used_letters << letter
+
+        # print longest_so_far
+        # puts " "
+        # print used_letters
+        # puts "----------"
     end
     return longest_so_far.join("")
 end
 
 s = "abcabcbb"
-s = "abcabcbbabcd"
+# s = "abcabcbbabcd"
 puts length_of_longest_substring(s)
