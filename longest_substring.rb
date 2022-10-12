@@ -22,12 +22,15 @@ def length_of_longest_substring(s)
         used_letters[now_array[r]] = r
         length += 1
         r = r + 1
-        
+        print used_letters
+        puts "And the length is: " + length.to_s
+        puts " "
     end
 
     return max_length
 end
 
-s = "abcabcbb"
+# s = "abcabcbb"
+s = "abcadbbb"
 # s = "abcabcbbabcd"
 puts length_of_longest_substring(s)
