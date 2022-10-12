@@ -9,9 +9,6 @@ def count_good_substrings(s)
   
 
    while r < (s.length) do
-    puts "r is " + r.to_s
-    puts "l is " + l.to_s
-    puts "---"
         if s[r] == s[r - 1]
             l += 1
         end
@@ -26,4 +23,6 @@ def count_good_substrings(s)
 end
 
 s = "xyzzaz"
+# s = "aababcabc"
+
 puts count_good_substrings(s)
