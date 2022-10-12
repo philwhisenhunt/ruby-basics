@@ -1,6 +1,7 @@
 def length_of_longest_substring(s)
 
     now_array = s.split('')
+    # puts now_array
     used_letters = {}
     max_length = 0
     length = 0
@@ -8,40 +9,31 @@ def length_of_longest_substring(s)
     l = 0
     r = 0
 
-    while r < (now_array.length) do
+    while r < (s.length) do
       
-        if used_letters.include?(now_array[r])
+        if used_letters.include?(s[r])
+            length = used_letters.length
             if max_length < length
                 max_length = length
                 
             end
             
+           
+            l = used_letters[s[r]] + 1
+            r = l
+            used_letters = {}
 
-            # used_letters = {}
-            # print used_letters
-            # puts " "
-            # puts used_letters.length
-            if used_letters.length == 4
-                puts "l is: " + l.to_s + " and r is: " + r.to_s
-                print used_letters
-            end
-            length = used_letters.length
-            l += 1
-            r += 1
-          
-
-            while now_array[l] == now_array[l - 1] && l < r
-                l += 1
-                
-            end
 
         end
-        used_letters[now_array[r]] = r
-        # length += 1
+        used_letters[s[r]] = r
+    
         r = r + 1
-        # print used_letters
-        # puts "And the length is: " + length.to_s
-        # puts " "
+     
+    end
+
+    # puts used_letters
+    if max_length < used_letters.length
+        max_length = used_letters.length
     end
 
     return max_length
@@ -49,6 +41,9 @@ end
 
 s = "abcabcbb"
 s = "abcadbbb"
-s = "pwwkew"
+# s = "pwwkew"
 # s = "abcabcbbabcd"
+s = " "
+# s = "aab"
+# s = 
 puts length_of_longest_substring(s)
