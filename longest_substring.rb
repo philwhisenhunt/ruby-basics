@@ -6,8 +6,12 @@ def length_of_longest_substring(s)
     length = 0
 
     now_array.each_with_index do |letter, index|
+        # print letter
         if used_letters.include?(letter)
-            max_length = length   
+            if max_length < length
+                max_length = length
+            end
+            
             length = 0
             used_letters = {}
         end
