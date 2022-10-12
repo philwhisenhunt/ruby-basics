@@ -12,7 +12,10 @@ def length_of_longest_substring(s)
         if used_letters.include?(now_array[r])
             if max_length < length
                 max_length = length
+                
             end
+            used_letters = {}
+            length = 0
             l = r + 1
             r = l + 1
         end
