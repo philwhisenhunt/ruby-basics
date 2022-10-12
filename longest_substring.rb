@@ -5,19 +5,21 @@ def length_of_longest_substring(s)
     max_length = 0
     length = 0
 
-    now_array.each_with_index do |letter, index|
-        # print letter
-        if used_letters.include?(letter)
+    l = 0
+    r = 0
+
+    while r < (now_array.length) do
+        if used_letters.include?(now_array[r])
             if max_length < length
                 max_length = length
             end
-            
-            length = 0
-            used_letters = {}
+            l = r + 1
+            r = l + 1
         end
-
-       used_letters[letter] = index     
-       length += 1
+        used_letters[now_array[r]] = r
+        length += 1
+        r = r + 1
+        
     end
 
     return max_length
