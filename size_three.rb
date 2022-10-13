@@ -9,28 +9,18 @@ def count_good_substrings(s)
   
 
    while r < (s.length) do
-
-  
-    if s[l] == s[r]
-        l += 1
+    if r - l == 1 && s[l] != s[r]
+        r += 1
     end
-    
-    if (r - l) == 2 && (s[l] != s[r])
-        puts "hit it"
-        puts "l is " + l.to_s
-        puts "r is " + r.to_s
-        puts s[l] + " to " + s[r]
-        puts " --"
+
+    if s[l] != s[r] && (r - l == 2)
         good_substrings_count += 1
         l += 1
-        
     end
 
    
-
-    r += 1
    
-    
+    r += 1
     end
     return good_substrings_count
 end
