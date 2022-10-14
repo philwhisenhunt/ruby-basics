@@ -21,8 +21,8 @@ def length_of_longest_substring(s)
            
             l = used_letters[s[r]] + 1
             r = l
-            used_letters = {}
-
+            # used_letters = {}
+            # Next up, remove that one letter OR replace it with the latest version of that letter
 
         end
         used_letters[s[r]] = r
