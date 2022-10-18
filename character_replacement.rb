@@ -8,14 +8,14 @@ def character_replacement(s, k)
         # puts r
 
         if used_array.include?(s[r])
-            return
+            break
         end
 
         used_array[s[r]] = r
 
         r += 1
-        print used_array
     end
+    print used_array
 end
 
 s = "ABAB"
