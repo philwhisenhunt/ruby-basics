@@ -5,14 +5,17 @@ def character_replacement(s, k)
     r = 0
     used_array = {}
     while r < s.length do 
-        puts r
+        # puts r
 
         if used_array.include?(s[r])
             return
         end
 
+        used_array[s[r]] = r
+
         r += 1
     end
+    return used_array
 end
 
 s = "ABAB"
