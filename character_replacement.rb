@@ -14,8 +14,8 @@ def character_replacement(s, k)
         used_array[s[r]] = r
 
         r += 1
+        print used_array
     end
-    return used_array
 end
 
 s = "ABAB"
