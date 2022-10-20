@@ -11,13 +11,17 @@ def character_replacement(s, k)
             break
         end
 
-        used_array[s[r]] = r
+        used_array[s[r]] = r.change_case
 
         r += 1
     end
     print used_array
 end
 
+def change_case(r)
+    return r
+
+end
 s = "ABAB"
 k = 2
 character_replacement(s, k)
