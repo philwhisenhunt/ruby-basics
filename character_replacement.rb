@@ -1,4 +1,4 @@
-class ChangeCase
+
 def character_replacement(s, k)
     #replace pieces of s with capitalized versions k times
     l = 0
@@ -11,7 +11,7 @@ def character_replacement(s, k)
             break
         end
 
-        used_array[s[r]] = r.downcase if r == r.upcase
+        used_array[s[r]] = r.downcase if s[r] == s[r].upcase
 
         r += 1
     end
@@ -22,7 +22,7 @@ end
         return r
 
     end
-end
+
 s = "ABAB"
 k = 2
 character_replacement(s, k)
