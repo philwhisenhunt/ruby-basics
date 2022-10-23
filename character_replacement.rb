@@ -1,17 +1,17 @@
 
-def character_replacement(s, k)
+def character_replacement(ss, k)
     #replace pieces of s with capitalized versions k times
     l = 0
     r = 0
     used_array = {}
-    while r < s.length do 
+    while r < ss.length do 
         # puts r
 
-        if used_array.include?(s[r])
+        if used_array.include?(ss[r])
             break
         end
 
-        used_array[s[r]] = r.downcase if s[r] == s[r].upcase
+        used_array[ss[r]] = r.downcase if ss[r] == ss[r].upcase
 
         r += 1
     end
@@ -23,6 +23,6 @@ end
 
     end
 
-s = "ABAB"
+ss = "ABAB"
 k = 2
-character_replacement(s, k)
+character_replacement(ss, k)
