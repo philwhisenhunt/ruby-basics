@@ -11,7 +11,7 @@ def character_replacement(ss, k)
             break
         end
 
-        used_array[ss[r]] = r.downcase if ss[r] == ss[r].upcase
+        used_array[ss[r]] = ss[r].downcase if ss[r] == ss[r].upcase
 
         r += 1
     end
