@@ -18,10 +18,7 @@ def character_replacement(ss, k)
     print used_array
 end
 
-    def change_case(r)
-        return r
 
-    end
 
 ss = "ABAB"
 k = 2
