@@ -6,7 +6,9 @@ def character_replacement(ss, k)
     used_array = {}
     while r < ss.length do 
        # now we need to look for a gap in repitition that is K long?
-
+        if r != l
+            #then we can increase the count by one and keep going
+        end
         if used_array.include?(ss[r])
             break
         end
