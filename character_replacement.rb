@@ -24,6 +24,9 @@ def character_replacement(ss, k)
 
         r += 1
     end
+
+    # Somehow need to account for k
+    # perhaps subtract 1 from k?
     
     # then just return the count of the array?
     print used_array.count
