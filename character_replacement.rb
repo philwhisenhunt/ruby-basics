@@ -11,6 +11,8 @@ def character_replacement(ss, k)
         if ss[r] != ss[l]
 
             reverse_cased = ss[r] == ss[r].upcase ? ss[r].downcase : ss[r].upcase
+
+            # only add it if it is not the same character as the last one in there
             flipped_array << reverse_cased
             #then we can increase the count by one and keep going
             count_of += 1
