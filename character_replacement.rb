@@ -14,6 +14,7 @@ def character_replacement(ss, k)
             flipped_array << reverse_cased
             #then we can increase the count by one and keep going
             count_of += 1
+            k -= 1
 
         end
         # if used_array.include?(ss[r])
