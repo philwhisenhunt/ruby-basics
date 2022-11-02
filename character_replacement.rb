@@ -6,32 +6,10 @@ def character_replacement(ss, k)
     count_of = 0
     flipped_array = []
     used_array = {}
-    while r < ss.length && k > 0 do 
-       # now we need to look for a gap in repitition that is K long?
-        if ss[r] != ss[l]
+    while r < ss.length do 
 
-            reverse_cased = ss[r] == ss[r].upcase ? ss[r].downcase : ss[r].upcase
-
-            # only add it if it is not the same character as the last one in there
-            flipped_array << reverse_cased
-            #then we can increase the count by one and keep going
-            count_of += 1
-            k -= 1
-
-        end
-        # if used_array.include?(ss[r])
-        #     break
-        # end
-
-        used_array[ss[r]] = ss[r].downcase if ss[r] == ss[r].upcase
-
-        r += 1
     end
 
-    # Somehow need to account for k
-    # perhaps subtract 1 from k?
-    
-    # then just return the count of the array?
     print used_array.count
 end
 
