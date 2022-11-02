@@ -8,9 +8,9 @@ def character_replacement(ss, k)
     used_array = {}
     while r < ss.length do 
         # Loop through once
-        # For each letter, see how long ago the same letter was
-        # If that number is less than or equal to 2, save it to the counting array
-        # At the end pick the highest number
+        # For each letter, see two things:
+            # How long until the duplicate
+            # How many different letters there are until that point
     end
 
     print used_array.count
