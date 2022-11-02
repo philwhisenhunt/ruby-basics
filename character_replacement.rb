@@ -6,7 +6,7 @@ def character_replacement(ss, k)
     count_of = 0
     flipped_array = []
     used_array = {}
-    while r < ss.length do 
+    while r < ss.length && k > 0 do 
        # now we need to look for a gap in repitition that is K long?
         if ss[r] != ss[l]
 
