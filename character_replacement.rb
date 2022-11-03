@@ -10,6 +10,11 @@ def character_replacement(ss, k)
         # Loop through once
         # For each letter, see two things:
             # How long until the duplicate
+            if used_array.contains?(ss[r])
+                # figure out where and the location
+            else
+                # otherwise add the letter and the location
+            end
             # How many different letters there are until that point
             distance = r - l
             r += 1
