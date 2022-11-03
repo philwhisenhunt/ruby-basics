@@ -11,6 +11,7 @@ def character_replacement(ss, k)
         # For each letter, see two things:
             # How long until the duplicate
             # How many different letters there are until that point
+            r += 1
     end
 
     print used_array.count
