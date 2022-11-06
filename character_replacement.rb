@@ -10,7 +10,7 @@ def character_replacement(ss, k)
         # Loop through once
         # For each letter, see two things:
             # How long until the duplicate
-            if used_array.contains?(ss[r])
+            if used_array.include?(ss[r])
                 # figure out where and the location
                 used_array[ss[r]] = r
             else
