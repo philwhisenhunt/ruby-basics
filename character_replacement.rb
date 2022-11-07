@@ -12,12 +12,13 @@ def character_replacement(ss, k)
             # How long until the duplicate
             if used_array.include?(ss[r])
                 # figure out where and the location
-                used_array[ss[r]] = r
+                distance = r - l
             else
                 # otherwise add the letter and the location
+                used_array[ss[r]] = r
             end
             # How many different letters there are until that point
-            distance = r - l
+            # distance = r - l
             r += 1
     end
 
