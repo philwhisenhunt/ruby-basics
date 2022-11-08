@@ -13,6 +13,7 @@ def character_replacement(ss, k)
             if used_array.include?(ss[r])
                 # figure out where and the location
                 distance = r - l
+                # and now that we know the distance, what do we do with it?
             else
                 # otherwise add the letter and the location
                 used_array[ss[r]] = r
