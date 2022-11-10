@@ -15,6 +15,8 @@ def character_replacement(ss, k)
                 # figure out where and the location
                 distance = r - l
                 # and now that we know the distance, what do we do with it?
+
+                longest_known_distance = distance if distance > longest_known_distance
                 # compare the distance to the longest known distance
             else
                 # otherwise add the letter and the location
