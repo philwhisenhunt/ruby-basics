@@ -27,7 +27,7 @@ def character_replacement(ss, k)
             r += 1
     end
 
-    print used_array.count
+    print longest_known_distance
 end
 
 
