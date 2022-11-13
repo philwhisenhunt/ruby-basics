@@ -20,6 +20,7 @@ def character_replacement(ss, k)
                 # compare the distance to the longest known distance
 
                 # and now we also need to update the used array with the last known location
+                used_array[ss[r]] = r
                 # of the letter
             else
                 # otherwise add the letter and the location
