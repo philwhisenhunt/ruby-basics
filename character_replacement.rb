@@ -11,7 +11,7 @@ def character_replacement(ss, k)
         # Loop through once
         # For each letter, see two things:
             # How long until the duplicate
-            if used_array.include?(ss[r])
+            if used_array.include?(ss[r]) && k > 0
                 # figure out where and the location
                 distance = r - l
                 # and now that we know the distance, what do we do with it?
