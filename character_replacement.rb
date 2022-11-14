@@ -25,6 +25,7 @@ def character_replacement(ss, k)
 
                 # next step is to take k into account
                 k -= 1
+                #but we may need to reset k at some point
             
             else
                 # otherwise add the letter and the location
