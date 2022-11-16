@@ -24,7 +24,7 @@ def character_replacement(ss, k)
                 used_array[ss[r]] = r
 
                 # next step is to take k into account
-                k -= 1
+                
                 #but we may need to reset k at some point
             
             else
@@ -34,7 +34,7 @@ def character_replacement(ss, k)
             # How many different letters there are until that point
             # distance = r - l
             r += 1
-
+            k -= 1
     end
 
     print longest_known_distance
