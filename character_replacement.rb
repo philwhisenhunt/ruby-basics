@@ -8,10 +8,15 @@ def character_replacement(ss, k)
     r = 0
 
     while r < ss.length do 
-        count[s[r]] = 1 + count[s[r]] || 0 
+        count[ss[r]] = count[ss[r]] ? (1 + count[ss[r]]) : 0 
+
+        if (r - 1 + 1) - count.values.max > k
+            count[ss[l]] -= 1
+            l += 1
+
+        end
 
 
-        
         res = [res, r - 1 + 1].max
     end
 
