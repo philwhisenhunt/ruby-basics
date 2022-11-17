@@ -7,6 +7,7 @@ def character_replacement(ss, k)
     flipped_array = []
     used_array = {}
     longest_known_distance = 0
+    original_k = k
     while r < ss.length do 
         # Loop through once
         # For each letter, see two things:
@@ -26,11 +27,11 @@ def character_replacement(ss, k)
                 # next step is to take k into account
                 
                 #but we may need to reset k at some point
-            
+                k -= 1
             else
                 # otherwise add the letter and the location
                 used_array[ss[r]] = r
-                k -= 1
+               k = original_k
             end
             # How many different letters there are until that point
             # distance = r - l
