@@ -8,7 +8,7 @@ def character_replacement(ss, k)
     r = 0
 
     while r < ss.length do 
-        count[ss[r]] = count[ss[r]] ? (1 + count[ss[r]]) : 0 
+        count[ss[r]] = !count[ss[r]].nil? ? (1 + count[ss[r]]) : 0 
 
         if (r - 1 + 1) - count.values.max > k
             count[ss[l]] -= 1
@@ -18,9 +18,11 @@ def character_replacement(ss, k)
 
 
         res = [res, r - 1 + 1].max
+        r += 1
     end
 
-    print longest_known_distance
+   
+    print res
 end
 
 
