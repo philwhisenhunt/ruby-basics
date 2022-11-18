@@ -1,7 +1,7 @@
 
 def character_replacement(ss, k)
  
-    count = {Hash.new(0)}
+    count = Hash.new(0)
    
     res = 0
     l = 0
