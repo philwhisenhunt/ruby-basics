@@ -7,12 +7,10 @@ def character_replacement(ss, k)
     l = 0
     r = 0
 
-    while r < ss.length do 
-        # puts "THE LETTER IS: " + ss[r]
-        r += 1
-        count[ss[r]] = !count[ss[r]].nil? ? (1 + count[ss[r]]) : 0 
+   for r in 0..(ss.length - 1)
 
-        puts count.values.max
+        count[ss[r]] += 1
+
         while((r - l + 1) - count.values.max) > k
          
             count[ss[l]] -= 1
@@ -22,11 +20,10 @@ def character_replacement(ss, k)
 
         
         res = [res, (r - l + 1)].max
-        # puts res
+
        
     end
 
-#    puts ""
     return res
 end
 
