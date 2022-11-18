@@ -1,27 +1,17 @@
 
 def character_replacement(ss, k)
  
- 
     count = {}
     res = 0
     l = 0
-    r = 0
 
    for r in 0..(ss.length - 1)
-
         count[ss[r]] += 1
-
         while((r - l + 1) - count.values.max) > k
-         
             count[ss[l]] -= 1
             l += 1
-
         end
-
-        
-        res = [res, (r - l + 1)].max
-
-       
+        res = [res, (r - l + 1)].max 
     end
 
     return res
